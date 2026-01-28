@@ -324,7 +324,7 @@ p{line-height:1.65}
 
 .proj-block{
   display:grid;
-  grid-template-columns: 190px 1fr;
+  grid-template-columns: 100px 1fr; /* Optimized for shorter labels */
   gap:12px;
   padding:10px 0;
 }
@@ -334,6 +334,7 @@ p{line-height:1.65}
 .proj-label{
   font-weight:800;
   color:#1d4ed8;
+  font-size:14px;
 }
 .proj-text{color:#0f172a; line-height:1.65}
 .proj-list{
