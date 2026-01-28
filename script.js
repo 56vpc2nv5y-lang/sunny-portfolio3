@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
         header.addEventListener('click', () => {
             const isOpen = acc.classList.contains('active');
             
-            // Close others
+            // Close others (keep visual clean)
             accordions.forEach(other => {
                 other.classList.remove('active');
                 other.querySelector('.accordion-body').style.maxHeight = null;
