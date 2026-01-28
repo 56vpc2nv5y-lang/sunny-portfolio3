@@ -12,7 +12,9 @@ document.getElementById("year").textContent = new Date().getFullYear();
 
 // ===== Project filters =====
 const chips = document.querySelectorAll(".chip");
-const projects = document.querySelectorAll(".project");
+// FIX: Only target projects inside the "Undergraduate/Experience" section for filtering
+// This prevents Grad Projects (which are separate) from disappearing when you click filters.
+const projects = document.querySelectorAll("#projects .project");
 
 chips.forEach(chip => {
   chip.addEventListener("click", () => {
@@ -32,7 +34,8 @@ chips.forEach(chip => {
 const toggles = document.querySelectorAll(".proj-toggle");
 
 toggles.forEach(btn => {
-  btn.addEventListener("click", () => {
+  btn.addEventListener("click", (e) => {
+    e.stopPropagation(); // Safe practice to prevent bubbling
     const expanded = btn.getAttribute("aria-expanded") === "true";
     const bodyId = btn.getAttribute("aria-controls");
     const body = document.getElementById(bodyId);
@@ -51,7 +54,8 @@ const evidenceData = {
     title: "Usage Evidence for SQL:",
     items: [
       { label: "DataStory Internship — Monthly KPI reporting & validation", href: "#exp-datastory", meta: "SQL extraction, cleaning, and metric checks for management reports" },
-      { label: "DataStory Internship — Dashboard metric pipeline", href: "#exp-datastory", meta: "KPI monitoring supporting performance tracking" }
+      { label: "DataStory Internship — Dashboard metric pipeline", href: "#exp-datastory", meta: "KPI monitoring supporting performance tracking" },
+      { label: "Happiness Index Project", href: "#proj-happiness", meta: "Joined multi-year public datasets for index construction" }
     ]
   },
   tableau: {
@@ -64,14 +68,15 @@ const evidenceData = {
     title: "Usage Evidence for Python (NLP):",
     items: [
       { label: "Government Social Media Comment Analysis (NLP)", href: "#proj-gov-nlp", meta: "Pipeline on 20,000 comments: preprocessing → categorization → metrics" },
-      { label: "DataStory Internship — Sentiment analysis", href: "#exp-datastory", meta: "50K+ brand comments sentiment insights for marketing support" }
+      { label: "RAG-based QA System", href: "#grad-projects", meta: "Vector embeddings and semantic search pipeline" }
     ]
   },
   modelling: {
     title: "Usage Evidence for Statistical Modelling:",
     items: [
       { label: "Health Engagement via the Internet", href: "#proj-health", meta: "Driver analysis through modelling with interpretable recommendations" },
-      { label: "Teaching Assistant (Econometrics) — applied modelling methods", href: "#exp-ta", meta: "Econometrics + modelling concepts taught and applied in practice" }
+      { label: "Teaching Assistant (Econometrics)", href: "#exp-ta", meta: "Econometrics + modelling concepts taught and applied in practice" },
+      { label: "Graduate Project: Advanced Statistical Modelling", href: "#grad-projects", meta: "GLM and multivariate analysis on complex datasets" }
     ]
   },
   market_research: {
