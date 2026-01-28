@@ -18,8 +18,9 @@
       <nav class="nav">
         <a href="#about">About</a>
         <a href="#education">Education</a>
-        <a href="#experience">Experience</a>
-        <a href="#projects">Projects</a>
+        <a href="#grad-projects">Grad Projects</a>
+        <a href="#ug-projects">Undergrad Projects</a>
+        <a href="#experience">Internship</a>
         <a class="nav-cta" href="#contact">Contact</a>
       </nav>
     </div>
@@ -38,7 +39,7 @@
           </p>
 
           <div class="hero-actions">
-            <a class="btn primary" href="#projects">View Projects</a>
+            <a class="btn primary" href="#grad-projects">View Projects</a>
             <a class="btn" href="resume.pdf" target="_blank">Preview CV</a>
           </div>
 
@@ -77,7 +78,7 @@
       <div class="container">
         <div class="section-head reveal center">
           <h2>Education</h2>
-          <p class="muted">High performance in quantitative disciplines.</p>
+          <p class="muted">Performance metrics & Key modules.</p>
         </div>
 
         <div class="education-grid">
@@ -98,7 +99,7 @@
               </div>
               <div class="quant-item bar-container">
                  <div class="progress-label">
-                   <span>Performance</span>
+                   <span>Overall Performance</span>
                    <span>92%</span>
                  </div>
                  <div class="progress-bg"><div class="progress-fill" style="width: 92%"></div></div>
@@ -145,11 +146,11 @@
       </div>
     </section>
 
-    <section id="projects" class="section alt">
+    <section id="grad-projects" class="section alt">
       <div class="container">
         <div class="section-head reveal center">
-          <h2>Projects</h2>
-          <p class="muted">Expand to see the step-by-step analysis breakdown.</p>
+          <h2>Graduate Projects</h2>
+          <p class="muted">Advanced coursework & research at NTU (English).</p>
         </div>
 
         <div class="projects-wrapper">
@@ -157,58 +158,50 @@
           <article class="project-accordion reveal">
             <div class="accordion-header">
               <div class="header-info">
-                <h3>Government Social Media Analysis</h3>
+                <h3>Retail Customer Churn Prediction</h3>
                 <div class="header-tags">
-                  <span class="tag">Python (NLP)</span>
-                  <span class="tag">Tableau</span>
+                  <span class="tag">Data Mining</span>
+                  <span class="tag">Python</span>
                 </div>
               </div>
               <button class="accordion-toggle" aria-label="Toggle details">
                 <i class="fas fa-plus"></i>
               </button>
             </div>
-
             <div class="accordion-body">
               <div class="timeline-container">
-                
                 <div class="timeline-step">
                   <div class="step-marker">1</div>
                   <div class="step-content">
                     <h4>Business Context</h4>
-                    <p>Public feedback was unstructured (20k+ comments), making manual reading impossible and sentiment tracking inaccurate.</p>
+                    <p>High customer churn rates in e-commerce required early detection to optimize retention marketing spend.</p>
                   </div>
                 </div>
-
                 <div class="timeline-step">
                   <div class="step-marker">2</div>
                   <div class="step-content">
                     <h4>My Role</h4>
-                    <p>Sole owner of the text pipeline. Moved the team from manual sampling to automated topic clustering.</p>
+                    <p>Led feature engineering and model evaluation phases.</p>
                   </div>
                 </div>
-
                 <div class="timeline-step">
                   <div class="step-marker">3</div>
                   <div class="step-content">
                     <h4>Method & Data</h4>
-                    <p><strong>Data:</strong> 20,000+ comments scraped via Python.</p>
-                    <p><strong>Tech:</strong> Jieba (segmentation), TF-IDF (keyword extraction), K-Means.</p>
-                    <p><strong>Why:</strong> TF-IDF effectively filtered generic stopwords compared to simple counts.</p>
+                    <p><strong>Data:</strong> Transaction logs of 50k users.</p>
+                    <p><strong>Method:</strong> XGBoost vs. Logistic Regression. Used SMOTE to handle class imbalance.</p>
                   </div>
                 </div>
-
                 <div class="timeline-step highlight">
                   <div class="step-marker"><i class="fas fa-lightbulb"></i></div>
                   <div class="step-content">
-                    <h4>Insight & Impact</h4>
-                    <p>Identified that "Process Delays" caused 60% of negative sentiment. Reduced reporting time by 90% via automated dashboard.</p>
+                    <h4>Insight</h4>
+                    <p>Identified "Last Login Days" as the top predictor. Model achieved 0.85 AUC, predicting potential churners 2 weeks in advance.</p>
                     <div class="step-links">
                       <a href="#" class="link-btn"><i class="fab fa-github"></i> GitHub</a>
-                      <a href="#" class="link-btn"><i class="fas fa-chart-line"></i> Dashboard</a>
                     </div>
                   </div>
                 </div>
-
               </div>
             </div>
           </article>
@@ -216,10 +209,74 @@
           <article class="project-accordion reveal">
             <div class="accordion-header">
               <div class="header-info">
-                <h3>Internet Health Engagement Analysis</h3>
+                <h3>Financial Report Q&A Bot (RAG)</h3>
                 <div class="header-tags">
-                  <span class="tag">Random Forest</span>
-                  <span class="tag">Modelling</span>
+                  <span class="tag">RAG</span>
+                  <span class="tag">LLM</span>
+                </div>
+              </div>
+              <button class="accordion-toggle" aria-label="Toggle details">
+                <i class="fas fa-plus"></i>
+              </button>
+            </div>
+            <div class="accordion-body">
+              <div class="timeline-container">
+                <div class="timeline-step">
+                  <div class="step-marker">1</div>
+                  <div class="step-content">
+                    <h4>Business Context</h4>
+                    <p>Analysts spend hours manually searching through PDF annual reports for specific financial figures.</p>
+                  </div>
+                </div>
+                <div class="timeline-step">
+                  <div class="step-marker">2</div>
+                  <div class="step-content">
+                    <h4>My Role</h4>
+                    <p>Built the retrieval pipeline and vector database setup.</p>
+                  </div>
+                </div>
+                <div class="timeline-step">
+                  <div class="step-marker">3</div>
+                  <div class="step-content">
+                    <h4>Method & Data</h4>
+                    <p><strong>Stack:</strong> LangChain, OpenAI API, ChromaDB.</p>
+                    <p><strong>Method:</strong> Retrieval-Augmented Generation (RAG) to ground LLM answers in verified PDF content.</p>
+                  </div>
+                </div>
+                <div class="timeline-step highlight">
+                  <div class="step-marker"><i class="fas fa-lightbulb"></i></div>
+                  <div class="step-content">
+                    <h4>Insight</h4>
+                    <p>Reduced information retrieval time by 80% with high accuracy on numerical queries.</p>
+                    <div class="step-links">
+                       <a href="#" class="link-btn"><i class="fab fa-github"></i> GitHub</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+          
+          </div>
+      </div>
+    </section>
+
+    <section id="ug-projects" class="section alt" style="background: #fff; border-top:none;">
+      <div class="container">
+        <div class="section-head reveal center">
+          <h2>Undergraduate Projects</h2>
+          <p class="muted">Selected works from Bachelor's degree.</p>
+        </div>
+
+        <div class="projects-wrapper">
+          
+          <article class="project-accordion reveal">
+            <div class="accordion-header">
+              <div class="header-info">
+                <h3>Gov Social Media Analysis</h3>
+                <div class="header-tags">
+                  <span class="tag desc-tag">Project in Chinese</span>
+                  <span class="tag">NLP</span>
                 </div>
               </div>
               <button class="accordion-toggle" aria-label="Toggle details">
@@ -233,76 +290,83 @@
                   <div class="step-marker">1</div>
                   <div class="step-content">
                     <h4>Business Context</h4>
-                    <p>The platform struggled to understand what specific factors drove user retention and active doctor-patient interaction.</p>
+                    <p>Analyzed 20,000+ public comments on Chinese social platforms to gauge sentiment on local policies.</p>
                   </div>
                 </div>
                 <div class="timeline-step">
                   <div class="step-marker">2</div>
                   <div class="step-content">
                     <h4>My Role</h4>
-                    <p>Designed the engagement framework metrics and led the predictive modelling phase.</p>
+                    <p>Sole owner of the text pipeline. Handled Chinese word segmentation (Jieba) and clustering.</p>
                   </div>
                 </div>
                 <div class="timeline-step">
                   <div class="step-marker">3</div>
                   <div class="step-content">
                     <h4>Method & Data</h4>
-                    <p>Handled 15% missing data via KNN. Used Random Forest for feature importance and Logistic Regression for interpretability.</p>
+                    <p><strong>Data:</strong> Web-scraped comments.</p>
+                    <p><strong>Method:</strong> TF-IDF for keyword extraction + K-Means Clustering to group topics.</p>
                   </div>
                 </div>
                 <div class="timeline-step highlight">
                   <div class="step-marker"><i class="fas fa-lightbulb"></i></div>
                   <div class="step-content">
-                    <h4>Insight & Impact</h4>
-                    <p>Discovered "Response Time" was 3x more predictive of retention than "Doctor Rating". Proposed a "Rapid Reply" badge feature.</p>
+                    <h4>Insight</h4>
+                    <p>Found "Process Delays" accounted for 60% of negative sentiment. Created an automated dashboard for the agency.</p>
+                    <div class="step-links">
+                      <a href="#" class="link-btn"><i class="fab fa-github"></i> GitHub (CN Code)</a>
+                      <a href="#" class="link-btn"><i class="fas fa-chart-line"></i> Dashboard Demo</a>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </article>
 
-           <article class="project-accordion reveal">
+          <article class="project-accordion reveal">
             <div class="accordion-header">
               <div class="header-info">
-                <h3>National Happiness Index System</h3>
+                <h3>National Happiness Index Study</h3>
                 <div class="header-tags">
-                  <span class="tag">SQL</span>
-                  <span class="tag">PCA</span>
+                   <span class="tag desc-tag">Competition (CN)</span>
+                   <span class="tag">PCA</span>
                 </div>
               </div>
               <button class="accordion-toggle" aria-label="Toggle details">
                 <i class="fas fa-plus"></i>
               </button>
             </div>
-
             <div class="accordion-body">
               <div class="timeline-container">
                 <div class="timeline-step">
                   <div class="step-marker">1</div>
                   <div class="step-content">
                     <h4>Business Context</h4>
-                    <p>Regional policymakers lacked a unified, data-driven standard to compare "Quality of Life" across different economic zones.</p>
+                    <p>Regional policymakers lacked a unified data standard to compare "Quality of Life" across economic zones.</p>
                   </div>
                 </div>
                 <div class="timeline-step">
                   <div class="step-marker">2</div>
                   <div class="step-content">
                     <h4>My Role</h4>
-                    <p>Data Architect: Constructed the index system and handled SQL data warehousing for multi-year data.</p>
+                    <p>Data Architect: Constructed the index system from 40+ variables.</p>
                   </div>
                 </div>
                 <div class="timeline-step">
                   <div class="step-marker">3</div>
                   <div class="step-content">
                     <h4>Method & Data</h4>
-                    <p>Joined 5-year census data via SQL. Used Principal Component Analysis (PCA) to reduce 40 collinear variables to 5 core factors.</p>
+                    <p><strong>Method:</strong> Principal Component Analysis (PCA) to reduce dimensionality while retaining 85% variance.</p>
                   </div>
                 </div>
                 <div class="timeline-step highlight">
                   <div class="step-marker"><i class="fas fa-lightbulb"></i></div>
                   <div class="step-content">
-                    <h4>Insight & Impact</h4>
-                    <p>Produced a ranking system adopted for reporting. Found "Environmental Quality" correlation with happiness increased by 20% post-2023.</p>
+                    <h4>Insight</h4>
+                    <p>Produced a regional ranking system. Discovered "Environmental Quality" weight increased by 20% in recent years.</p>
+                    <div class="step-links">
+                       <a href="#" class="link-btn"><i class="fas fa-file-pdf"></i> View Report (CN)</a>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -316,7 +380,7 @@
     <section id="experience" class="section">
       <div class="container">
         <div class="section-head reveal center">
-          <h2>Experience</h2>
+          <h2>Intern Experience</h2>
         </div>
         <div class="grid2">
           <article class="card">
@@ -338,7 +402,7 @@
       </div>
     </section>
 
-    <section id="contact" class="section">
+    <section id="contact" class="section alt">
       <div class="container center">
         <h2>Let's Connect</h2>
         <p>JINGYI021@e.ntu.edu.sg</p>
