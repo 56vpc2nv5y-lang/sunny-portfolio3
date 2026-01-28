@@ -9,14 +9,15 @@
 </head>
 
 <body>
+  <!-- Top Nav -->
   <header class="topbar">
     <div class="container topbar-inner">
-      <a class="brand" href="#top">Sunny.</a>
+      <a class="btn" href="resume.pdf" download>Download CV</a>
       <nav class="nav">
         <a href="#about">About</a>
         <a href="#education">Education</a>
-        <a href="#grad-projects">Grad Projects</a>
-        <a href="#projects">Exp Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
         <a href="#skills">Skills</a>
         <a class="nav-cta" href="#contact">Contact</a>
       </nav>
@@ -24,6 +25,7 @@
   </header>
 
   <main id="top">
+    <!-- Hero -->
     <section class="section hero">
       <div class="container hero-grid">
         <div class="hero-left reveal">
@@ -36,8 +38,8 @@
           </p>
 
           <div class="hero-actions">
-            <a class="btn primary" href="#grad-projects">View Latest Work</a>
-            <a class="btn" href="resume.pdf" download>Download CV</a>
+            <a class="btn primary" href="#projects">View Projects</a>
+            <a class="btn" href="assets/cv.pdf" target="_blank" rel="noopener">Download CV</a>
           </div>
 
           <div class="proof-row">
@@ -50,8 +52,9 @@
 
         <div class="hero-right reveal">
           <div class="hero-card">
-            <div class="hero-img" role="img" aria-label="Profile image">
-              <img src="image.png" alt="Sunny Zhang" onerror="this.style.display='none'; this.parentElement.classList.add('noimg');" />
+            <div class="hero-img" role="img" aria-label="Profile image placeholder">
+              <img src="image.png" alt="Sunny Zhang"
+                   onerror="this.style.display='none'; this.parentElement.classList.add('noimg');" />
               <div class="hero-img-fallback">
                 <div class="fallback-title">Portfolio</div>
                 <div class="fallback-sub">Scroll to explore evidence</div>
@@ -83,6 +86,7 @@
       </div>
     </section>
 
+    <!-- About -->
     <section id="about" class="section">
       <div class="container">
         <div class="section-head reveal center">
@@ -112,14 +116,16 @@
       </div>
     </section>
 
+    <!-- Education -->
     <section id="education" class="section alt">
       <div class="container">
         <div class="section-head reveal center">
           <h2>Education</h2>
-          <p class="muted">High-impact academic performance.</p>
+          <p class="muted">Quantified highlights first, then concise modules.</p>
         </div>
 
         <div class="timeline">
+          <!-- NTU -->
           <div class="timeline-item card reveal" id="edu-ntu">
             <div class="timeline-top">
               <h3>Nanyang Technological University (NTU), Singapore</h3>
@@ -131,18 +137,25 @@
                 <p><strong>MSc in Analytics</strong></p>
                 <div class="edu-kpis">
                   <span class="kpi">CGPA: 4.60 / 5.00</span>
-                  <span class="kpi">Grade: A+/A</span>
+                  <span class="kpi">Key Grades: A+/A</span>
+                  <span class="kpi">Focus: BI + Modelling</span>
                 </div>
               </div>
               <div class="edu-right">
                 <ul class="edu-bullets">
-                  <li><strong>Core Focus:</strong> End-to-end Analytics (Data → Model → Viz).</li>
-                  <li><strong>Key Projects:</strong> Recommendation Systems, RAG Pipelines, Data Mining.</li>
+                  <li>Built end-to-end analytical workflows: data → modelling → visualization.</li>
+                  <li>Completed advanced coursework in data mining, databases, and statistical modelling.</li>
+                  <li>Applied SQL + Python for projects and evaluation.</li>
                 </ul>
               </div>
             </div>
+
+            <p class="muted edu-modules">
+              Key Modules: Data Mining (A+), Database Systems (A), Statistical Modelling & Data Analytics (A)
+            </p>
           </div>
 
+          <!-- GDUFS -->
           <div class="timeline-item card reveal" id="edu-gdufs">
             <div class="timeline-top">
               <h3>Guangdong University of Foreign Studies (GDUFS), China</h3>
@@ -155,35 +168,45 @@
                 <div class="edu-kpis">
                   <span class="kpi">CGPA: 3.90 / 4.00</span>
                   <span class="kpi">Top 4%</span>
+                  <span class="kpi">Strength: Econometrics</span>
                 </div>
               </div>
               <div class="edu-right">
                 <ul class="edu-bullets">
-                  <li><strong>Core Focus:</strong> Econometrics, Regression, Inference.</li>
-                  <li><strong>Achievement:</strong> Led 3+ modelling competitions (Team Lead).</li>
+                  <li>Solid foundation in probability, inference, and regression modelling.</li>
+                  <li>Applied modelling in coursework, TA work, and independent projects.</li>
+                  <li>Comfortable with rigorous evaluation and interpretation (可解释性).</li>
                 </ul>
               </div>
             </div>
+
+            <p class="muted edu-modules">
+              Key Modules: Mathematical Statistics (A+), Econometrics (A+), Modern Regression Analysis (A)
+            </p>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- Experience -->
     <section id="experience" class="section">
       <div class="container">
         <div class="section-head reveal center">
           <h2>Professional Experience</h2>
-          <p class="muted">Data → Insight → Action.</p>
+          <p class="muted">Different titles, one consistent theme: data → insight → action.</p>
         </div>
 
         <div class="grid2">
           <article class="card reveal" id="exp-datastory">
             <h3>Data Analyst Intern @ DataStory Co., Ltd.</h3>
             <p class="muted">Apr 2025 – Jun 2025</p>
-            <p>Built BI dashboards and supported performance tracking through SQL-driven reporting and KPI validation.</p>
+            <p>
+              Built BI dashboards and supported performance tracking through SQL-driven reporting, KPI validation, and visualization.
+            </p>
             <div class="pillrow">
               <a class="taglink" href="#skill-sql">SQL</a>
               <a class="taglink" href="#skill-tableau">Tableau</a>
+              <a class="taglink" href="#skill-excel">Excel</a>
               <a class="taglink" href="#skill-viz">Visualization</a>
             </div>
           </article>
@@ -191,381 +214,256 @@
           <article class="card reveal" id="exp-ta">
             <h3>Teaching Assistant (Econometrics) @ GDUFS</h3>
             <p class="muted">Sep 2023 – Jun 2024</p>
-            <p>Led data analysis workshops and applied modelling/ML in supplementary analyses to improve learning outcomes.</p>
+            <p>
+              Led data analysis workshops and applied modelling / ML in supplementary analyses to improve learning outcomes.
+            </p>
             <div class="pillrow">
               <a class="taglink" href="#skill-python">Python</a>
-              <a class="taglink" href="#skill-modelling">Modelling</a>
+              <a class="taglink" href="#skill-modelling">Statistical Modelling</a>
+              <a class="taglink" href="#skill-ml">Machine Learning</a>
             </div>
           </article>
 
           <article class="card reveal" id="exp-audit">
             <h3>Audit Intern @ Huaxing CPA</h3>
             <p class="muted">Dec 2024 – Mar 2025</p>
-            <p>Conducted financial checks and variance analysis; supported audits with risk-focused analytical reviews.</p>
+            <p>
+              Conducted financial checks and variance analysis; supported audits with risk-focused analytical reviews.
+            </p>
             <div class="pillrow">
               <a class="taglink" href="#skill-excel">Excel</a>
               <a class="taglink" href="#skill-risk">Risk / Compliance</a>
+              <a class="taglink" href="#skill-modelling">Modelling</a>
             </div>
           </article>
 
           <article class="card reveal" id="exp-securities">
             <h3>Investment Assistant Intern @ Haitong Securities</h3>
             <p class="muted">Jun 2023 – Aug 2023</p>
-            <p>Produced market reports based on price/volume analysis and supported insight delivery for clients.</p>
+            <p>
+              Produced market reports based on price/volume analysis and supported insight delivery for clients.
+            </p>
             <div class="pillrow">
-              <a class="taglink" href="#skill-finance">Finance</a>
-              <a class="taglink" href="#skill-storytelling">Reporting</a>
+              <a class="taglink" href="#skill-finance">Finance Domain</a>
+              <a class="taglink" href="#skill-storytelling">Insight Storytelling</a>
+              <a class="taglink" href="#skill-excel">Excel</a>
             </div>
           </article>
         </div>
       </div>
     </section>
 
-    <section id="grad-projects" class="section alt">
+    <!-- Projects -->
+    <section id="projects" class="section alt">
       <div class="container">
         <div class="section-head reveal center">
-          <h2>Graduate Projects</h2>
-          <p class="muted">Advanced coursework & research at NTU (English Documentation).</p>
-        </div>
-
-        <div class="grid2">
-          
-          <article class="card reveal project project-collapsible" id="gp-rag">
-            <div class="project-head">
-              <div class="project-head-left">
-                <h3>RAG-based QA System</h3>
-                <p class="muted project-one-liner">Enhancing LLM accuracy with external knowledge.</p>
-                <div class="pillrow">
-                  <span class="tag">LLM</span>
-                  <span class="tag">Python</span>
-                  <span class="tag">Vector DB</span>
-                </div>
-              </div>
-              <button class="proj-toggle" type="button" aria-expanded="false" aria-controls="gp-rag-body"><span class="plus">+</span></button>
-            </div>
-            <div class="project-body" id="gp-rag-body" hidden>
-              <div class="proj-block">
-                <div class="proj-label">Context</div>
-                <div class="proj-text">Address LLM hallucinations in specialized domains by retrieving relevant context before generation.</div>
-              </div>
-              <div class="proj-block">
-                <div class="proj-label">Role</div>
-                <ul class="proj-list">
-                  <li>Built the retrieval pipeline using vector embeddings.</li>
-                  <li>Optimized prompt engineering for context integration.</li>
-                </ul>
-              </div>
-              <div class="proj-block">
-                <div class="proj-label">Method</div>
-                <ul class="proj-list">
-                  <li>Tools: LangChain, ChromaDB, OpenAI API.</li>
-                  <li>Approach: Semantic search (Cosine Similarity) + Generative response.</li>
-                </ul>
-              </div>
-              <div class="proj-block">
-                <div class="proj-label">Insight</div>
-                <ul class="proj-list">
-                  <li>Reduced factual errors by significant margin compared to base model.</li>
-                  <li>Demonstrated viable latency for real-time usage.</li>
-                </ul>
-              </div>
-              <div class="proj-links">
-                <a class="btn" href="#">GitHub</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="card reveal project project-collapsible" id="gp-recsys">
-            <div class="project-head">
-              <div class="project-head-left">
-                <h3>Personalized Recommender</h3>
-                <p class="muted project-one-liner">Hybrid filtering approach for retention.</p>
-                <div class="pillrow">
-                  <span class="tag">Machine Learning</span>
-                  <span class="tag">Python</span>
-                </div>
-              </div>
-              <button class="proj-toggle" type="button" aria-expanded="false" aria-controls="gp-recsys-body"><span class="plus">+</span></button>
-            </div>
-            <div class="project-body" id="gp-recsys-body" hidden>
-              <div class="proj-block">
-                <div class="proj-label">Context</div>
-                <div class="proj-text">Improve item discovery and user engagement on platforms.</div>
-              </div>
-              <div class="proj-block">
-                <div class="proj-label">Role</div>
-                <ul class="proj-list">
-                  <li>Implemented Collaborative Filtering and Content-based models.</li>
-                  <li>Addressed the "Cold Start" problem.</li>
-                </ul>
-              </div>
-              <div class="proj-block">
-                <div class="proj-label">Method</div>
-                <ul class="proj-list">
-                  <li>Matrix Factorization (SVD) & Deep Learning embeddings.</li>
-                  <li>Evaluated using RMSE and Precision@K.</li>
-                </ul>
-              </div>
-              <div class="proj-block">
-                <div class="proj-label">Insight</div>
-                <ul class="proj-list">
-                  <li>Hybrid model outperformed baseline by 15%.</li>
-                  <li>Effective handling of sparse user-item matrices.</li>
-                </ul>
-              </div>
-              <div class="proj-links">
-                <a class="btn" href="#">GitHub</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="card reveal project project-collapsible" id="gp-stat">
-            <div class="project-head">
-              <div class="project-head-left">
-                <h3>Statistical Modelling</h3>
-                <p class="muted project-one-liner">Multivariate analysis for interpretation.</p>
-                <div class="pillrow">
-                  <span class="tag">R / Python</span>
-                  <span class="tag">Statistics</span>
-                </div>
-              </div>
-              <button class="proj-toggle" type="button" aria-expanded="false" aria-controls="gp-stat-body"><span class="plus">+</span></button>
-            </div>
-            <div class="project-body" id="gp-stat-body" hidden>
-              <div class="proj-block">
-                <div class="proj-label">Context</div>
-                <div class="proj-text">Deriving causal relationships from noisy observational data.</div>
-              </div>
-              <div class="proj-block">
-                <div class="proj-label">Role</div>
-                <ul class="proj-list">
-                  <li>Conducted variable selection and model diagnostics.</li>
-                  <li>Validated assumptions (normality, homoscedasticity).</li>
-                </ul>
-              </div>
-              <div class="proj-block">
-                <div class="proj-label">Method</div>
-                <ul class="proj-list">
-                  <li>GLM (Generalized Linear Models) & Hypothesis testing.</li>
-                  <li>Rigorous validation of p-values and confidence intervals.</li>
-                </ul>
-              </div>
-              <div class="proj-block">
-                <div class="proj-label">Insight</div>
-                <ul class="proj-list">
-                  <li>Identified significant predictors with 95% confidence.</li>
-                  <li>Provided interpretable coefficients for stakeholders.</li>
-                </ul>
-              </div>
-              <div class="proj-links">
-                <a class="btn" href="#">Report</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="card reveal project project-collapsible" id="gp-mining">
-            <div class="project-head">
-              <div class="project-head-left">
-                <h3>High-Dim Data Mining</h3>
-                <p class="muted project-one-liner">Pattern discovery in large-scale datasets.</p>
-                <div class="pillrow">
-                  <span class="tag">Clustering</span>
-                  <span class="tag">Python</span>
-                </div>
-              </div>
-              <button class="proj-toggle" type="button" aria-expanded="false" aria-controls="gp-mining-body"><span class="plus">+</span></button>
-            </div>
-            <div class="project-body" id="gp-mining-body" hidden>
-              <div class="proj-block">
-                <div class="proj-label">Context</div>
-                <div class="proj-text">Segmenting users or detecting anomalies in transaction logs.</div>
-              </div>
-              <div class="proj-block">
-                <div class="proj-label">Role</div>
-                <ul class="proj-list">
-                  <li>Preprocessing high-dimensional data (PCA/t-SNE).</li>
-                  <li>Applied unsupervised learning algorithms.</li>
-                </ul>
-              </div>
-              <div class="proj-block">
-                <div class="proj-label">Method</div>
-                <ul class="proj-list">
-                  <li>K-Means, DBSCAN, or Association Rule Mining.</li>
-                  <li>Silhouette score optimization.</li>
-                </ul>
-              </div>
-              <div class="proj-block">
-                <div class="proj-label">Insight</div>
-                <ul class="proj-list">
-                  <li>Discovered distinct user personas for targeted marketing.</li>
-                  <li>Detected outliers representing potential irregularities.</li>
-                </ul>
-              </div>
-              <div class="proj-links">
-                <a class="btn" href="#">GitHub</a>
-              </div>
-            </div>
-          </article>
-
-        </div>
-      </div>
-    </section>
-
-    <section id="projects" class="section">
-      <div class="container">
-        <div class="section-head reveal center">
-          <h2>Undergraduate Projects</h2>
-          <p class="muted">Selected works from competitions & internships.</p>
+          <h2>Projects</h2>
+          <p class="muted">Each project is a collapsible card: Context → What I did → How → Insight → Links.</p>
         </div>
 
         <div class="filters reveal">
           <button class="chip active" data-filter="all">All</button>
-          <button class="chip" data-filter="nlp">NLP</button>
-          <button class="chip" data-filter="model">Modelling</button>
           <button class="chip" data-filter="sql">SQL</button>
+          <button class="chip" data-filter="viz">Visualization</button>
+          <button class="chip" data-filter="model">Modelling</button>
+          <button class="chip" data-filter="nlp">NLP</button>
         </div>
 
         <div class="grid3">
+          <!-- Project 1 -->
           <article class="card reveal project project-collapsible" data-tags="nlp,viz" id="proj-gov-nlp">
             <div class="project-head">
               <div class="project-head-left">
-                <h3>Gov Social Media NLP <span class="tag" style="font-size:10px; color:#64748b; border-color:#e2e8f0;">CN Docs</span></h3>
-                <p class="muted project-one-liner">20,000 comments • Sentiment pipeline.</p>
+                <h3>Government Social Media Comment Analysis (NLP)</h3>
+                <p class="muted project-one-liner">
+                  20,000 comments • end-to-end pipeline • engagement insight delivery.
+                </p>
                 <div class="pillrow">
                   <span class="tag">Python</span>
                   <span class="tag">NLP</span>
+                  <span class="tag">Visualization</span>
                 </div>
               </div>
-              <button class="proj-toggle" type="button" aria-expanded="false" aria-controls="proj1-body"><span class="plus">+</span></button>
+
+              <button class="proj-toggle" type="button" aria-expanded="false" aria-controls="proj1-body">
+                <span class="plus">+</span>
+              </button>
             </div>
+
             <div class="project-body" id="proj1-body" hidden>
               <div class="proj-block">
-                <div class="proj-label">Context</div>
-                <div class="proj-text">Analyze public sentiment on policies to guide content strategy.</div>
+                <div class="proj-label">Context (业务背景)</div>
+                <div class="proj-text">
+                  Why it exists, what real-world problem it solves, and what success looks like.
+                </div>
               </div>
+
               <div class="proj-block">
-                <div class="proj-label">Role</div>
+                <div class="proj-label">What I did (我做了什么)</div>
                 <ul class="proj-list">
-                  <li>Built the collection + cleaning pipeline.</li>
-                  <li>Designed categorization metrics.</li>
+                  <li>Built the data collection + cleaning pipeline and defined analysis metrics.</li>
+                  <li>Designed the text categorization approach and validation checks.</li>
+                  <li>Produced the final reporting layout for stakeholders.</li>
                 </ul>
               </div>
+
               <div class="proj-block">
-                <div class="proj-label">Method</div>
+                <div class="proj-label">How (方法与数据)</div>
                 <ul class="proj-list">
-                  <li>Source: Weibo/WeChat public comments.</li>
-                  <li>Technique: Dictionary-based NLP + LDA Topic Modelling.</li>
+                  <li>Data source: public comments from social platforms (replace with exact source).</li>
+                  <li>Why this method: balanced interpretability + performance for short texts.</li>
+                  <li>Process: preprocessing → feature/labeling → evaluation → dashboard-ready outputs.</li>
                 </ul>
               </div>
+
               <div class="proj-block">
-                <div class="proj-label">Insight</div>
+                <div class="proj-label">Insight (结论与启示)</div>
                 <ul class="proj-list">
                   <li>Identified top discussion themes and engagement drivers.</li>
-                  <li>Suggested content strategy adjustments based on data.</li>
+                  <li>Suggested content strategy adjustments based on measurable signals.</li>
                 </ul>
               </div>
+
               <div class="proj-links">
-                <a class="btn" href="#">GitHub (CN)</a>
-                <a class="btn" href="#">Dashboard</a>
+                <a class="btn" href="#" aria-disabled="true">GitHub</a>
+                <a class="btn" href="#" aria-disabled="true">Dashboard Screenshot</a>
+                <a class="btn" href="#" aria-disabled="true">Demo</a>
               </div>
             </div>
           </article>
 
+          <!-- Project 2 -->
           <article class="card reveal project project-collapsible" data-tags="model,viz" id="proj-health">
             <div class="project-head">
               <div class="project-head-left">
-                <h3>Health Engagement <span class="tag" style="font-size:10px; color:#64748b; border-color:#e2e8f0;">CN Docs</span></h3>
-                <p class="muted project-one-liner">Driver analysis & interpretable modelling.</p>
+                <h3>Health Engagement via the Internet</h3>
+                <p class="muted project-one-liner">
+                  Defined indicators • validated quality • modelled drivers • translated into recommendations.
+                </p>
                 <div class="pillrow">
                   <span class="tag">Modelling</span>
                   <span class="tag">ML</span>
+                  <span class="tag">Visualization</span>
                 </div>
               </div>
-              <button class="proj-toggle" type="button" aria-expanded="false" aria-controls="proj2-body"><span class="plus">+</span></button>
+
+              <button class="proj-toggle" type="button" aria-expanded="false" aria-controls="proj2-body">
+                <span class="plus">+</span>
+              </button>
             </div>
+
             <div class="project-body" id="proj2-body" hidden>
               <div class="proj-block">
-                <div class="proj-label">Context</div>
-                <div class="proj-text">Identify what drives users to engage with online health services.</div>
+                <div class="proj-label">Context (业务背景)</div>
+                <div class="proj-text">
+                  Explain why engagement measurement matters and what decision it supports.
+                </div>
               </div>
+
               <div class="proj-block">
-                <div class="proj-label">Role</div>
+                <div class="proj-label">What I did (我做了什么)</div>
                 <ul class="proj-list">
-                  <li>Designed measurement framework.</li>
-                  <li>Ran modelling experiments.</li>
+                  <li>Designed the measurement framework and feature definitions.</li>
+                  <li>Ran modelling experiments and compared candidates.</li>
+                  <li>Summarized results into stakeholder-friendly recommendations.</li>
                 </ul>
               </div>
+
               <div class="proj-block">
-                <div class="proj-label">Method</div>
+                <div class="proj-label">How (方法与数据)</div>
                 <ul class="proj-list">
-                  <li>Source: Survey data.</li>
-                  <li>Technique: Lasso Regression (Selection) & Random Forest.</li>
+                  <li>Data source: (fill in dataset / survey / platform logs).</li>
+                  <li>Method choice: interpretable model for decision support (可解释性).</li>
+                  <li>Evaluation: holdout validation + error metrics + robustness checks.</li>
                 </ul>
               </div>
+
               <div class="proj-block">
-                <div class="proj-label">Insight</div>
+                <div class="proj-label">Insight (结论与启示)</div>
                 <ul class="proj-list">
-                  <li>Trust and UI Ease-of-use were top predictors.</li>
-                  <li>Converted drivers into actionable levers.</li>
+                  <li>Found key drivers that most strongly affect engagement outcomes.</li>
+                  <li>Converted drivers into actionable levers for policy/operations.</li>
                 </ul>
               </div>
+
               <div class="proj-links">
-                <a class="btn" href="#">GitHub (CN)</a>
+                <a class="btn" href="#" aria-disabled="true">GitHub</a>
+                <a class="btn" href="#" aria-disabled="true">Dashboard Screenshot</a>
+                <a class="btn" href="#" aria-disabled="true">Demo</a>
               </div>
             </div>
           </article>
 
+          <!-- Project 3 -->
           <article class="card reveal project project-collapsible" data-tags="model,sql" id="proj-happiness">
             <div class="project-head">
               <div class="project-head-left">
-                <h3>Happiness Index <span class="tag" style="font-size:10px; color:#64748b; border-color:#e2e8f0;">CN Docs</span></h3>
-                <p class="muted project-one-liner">Index construction • Multi-year comparison.</p>
+                <h3>National Happiness Index Measurement</h3>
+                <p class="muted project-one-liner">
+                  Built multi-dimension index • multi-year comparison • factor attribution insight.
+                </p>
                 <div class="pillrow">
-                  <span class="tag">Statistics</span>
+                  <span class="tag">Modelling</span>
                   <span class="tag">SQL</span>
+                  <span class="tag">Storytelling</span>
                 </div>
               </div>
-              <button class="proj-toggle" type="button" aria-expanded="false" aria-controls="proj3-body"><span class="plus">+</span></button>
+
+              <button class="proj-toggle" type="button" aria-expanded="false" aria-controls="proj3-body">
+                <span class="plus">+</span>
+              </button>
             </div>
+
             <div class="project-body" id="proj3-body" hidden>
               <div class="proj-block">
-                <div class="proj-label">Context</div>
-                <div class="proj-text">Evaluating regional happiness levels to support policy suggestions.</div>
+                <div class="proj-label">Context (业务背景)</div>
+                <div class="proj-text">
+                  Why the index matters and what it is used to compare/decide.
+                </div>
               </div>
+
               <div class="proj-block">
-                <div class="proj-label">Role</div>
+                <div class="proj-label">What I did (我做了什么)</div>
                 <ul class="proj-list">
-                  <li>Defined index structure and weights.</li>
-                  <li>Cleaned multi-year data using SQL.</li>
+                  <li>Defined the index structure and indicator weighting approach.</li>
+                  <li>Cleaned and joined multi-year public data using SQL.</li>
+                  <li>Built ranking + explanation narrative for stakeholders.</li>
                 </ul>
               </div>
+
               <div class="proj-block">
-                <div class="proj-label">Method</div>
+                <div class="proj-label">How (方法与数据)</div>
                 <ul class="proj-list">
-                  <li>Source: Public statistical datasets.</li>
-                  <li>Technique: PCA for weight assignment + Sensitivity checks.</li>
+                  <li>Data source: public statistical datasets (replace with exact source).</li>
+                  <li>Method choice: stable index design + interpretable decomposition.</li>
+                  <li>Validation: sensitivity checks on weights and missing data.</li>
                 </ul>
               </div>
+
               <div class="proj-block">
-                <div class="proj-label">Insight</div>
+                <div class="proj-label">Insight (结论与启示)</div>
                 <ul class="proj-list">
-                  <li>Produced regional ranking and factor attribution.</li>
-                  <li>Identified key areas for improvement in specific provinces.</li>
+                  <li>Produced regional ranking and identified key contributing factors.</li>
+                  <li>Suggested focus areas for improving index components.</li>
                 </ul>
               </div>
+
               <div class="proj-links">
-                <a class="btn" href="#">Paper (CN)</a>
+                <a class="btn" href="#" aria-disabled="true">GitHub</a>
+                <a class="btn" href="#" aria-disabled="true">Dashboard Screenshot</a>
+                <a class="btn" href="#" aria-disabled="true">Demo</a>
               </div>
             </div>
           </article>
         </div>
 
         <p class="muted" style="text-align:center; margin-top:18px;">
-          Note: "CN Docs" indicates projects with documentation primarily in Chinese.
+          Tip: Replace “#” links with your real GitHub / dashboard / demo URLs.
         </p>
       </div>
     </section>
 
+    <!-- Skills (new style) -->
     <section id="skills" class="section">
       <div class="container">
         <div class="section-head reveal center">
@@ -588,6 +486,7 @@
       </div>
     </section>
 
+    <!-- Contact -->
     <section id="contact" class="section alt">
       <div class="container">
         <div class="section-head reveal center">
@@ -605,7 +504,8 @@
           <div class="card reveal">
             <h3>Links</h3>
             <p><a class="textlink" href="https://www.linkedin.com/in/jingyi-zhang-46289a378/" target="_blank" rel="noopener">LinkedIn</a></p>
-            <p><a class="textlink" href="#" aria-disabled="true">GitHub</a></p>
+            <p><a class="textlink" href="#" aria-disabled="true">GitHub (add)</a></p>
+            <p class="muted">Replace placeholders once your links are ready.</p>
           </div>
         </div>
 
