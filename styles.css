@@ -125,14 +125,7 @@ p{line-height:1.65}
               radial-gradient(900px 260px at 80% 40%, rgba(37,99,235,.10), transparent 60%),
               #f8fafc;
 }
-.hero-img img{
-  width:100%; 
-  height:100%; 
-  object-fit:cover; 
-  /* Fixed position to show more face/body */
-  object-position: center 15%; 
-  display:block
-}
+.hero-img img{width:100%; height:100%; object-fit:cover; display:block}
 .hero-img.noimg .hero-img-fallback{display:flex}
 .hero-img-fallback{
   position:absolute; inset:0;
@@ -323,7 +316,7 @@ p{line-height:1.65}
 
 .proj-block{
   display:grid;
-  grid-template-columns: 100px 1fr; /* Optimized for shorter labels */
+  grid-template-columns: 190px 1fr;
   gap:12px;
   padding:10px 0;
 }
@@ -333,7 +326,6 @@ p{line-height:1.65}
 .proj-label{
   font-weight:800;
   color:#1d4ed8;
-  font-size:14px;
 }
 .proj-text{color:#0f172a; line-height:1.65}
 .proj-list{
