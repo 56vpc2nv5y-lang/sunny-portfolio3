@@ -54,7 +54,7 @@ h2 { font-size: 2.2rem; margin-bottom: 10px; color: #0f172a; }
 }
 .hero-img { 
   width: 100%; 
-  /* 调整为 3:4 的比例，适合竖版照片 */
+  /* 调整为 3:4 的比例，更适合竖版照片 */
   aspect-ratio: 3/4; 
   border-radius: 8px; 
   overflow: hidden; 
@@ -64,15 +64,15 @@ h2 { font-size: 2.2rem; margin-bottom: 10px; color: #0f172a; }
   width: 100%; 
   height: 100%; 
   object-fit: cover; 
-  /* 关键：确保脸部不被切掉，始终从顶部开始显示 */
-  object-position: top center; 
+  /* 调整重心：向下一点点，避免切头 */
+  object-position: center 20%; 
 }
 
 .hero-meta { margin-top: 10px; display: flex; justify-content: space-between; padding: 5px 10px; }
 .meta-k { font-size: 0.75rem; text-transform: uppercase; color: var(--text-muted); }
 .meta-v { font-weight: 600; font-size: 0.9rem; }
 
-/* --- NEW: Education Minimalist --- */
+/* --- Education Quantified --- */
 .education-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 40px; }
 .edu-card { background: white; border: 1px solid var(--border); padding: 25px; border-radius: var(--radius); display: flex; flex-direction: column; gap: 20px; box-shadow: 0 4px 6px -2px rgba(0,0,0,0.02); }
 
@@ -95,7 +95,7 @@ h2 { font-size: 2.2rem; margin-bottom: 10px; color: #0f172a; }
 .edu-tags { display: flex; flex-wrap: wrap; gap: 8px; }
 .et { font-size: 0.75rem; background: #f8fafc; padding: 4px 10px; border-radius: 6px; color: #64748b; border: 1px solid var(--border); }
 
-/* --- NEW: Timeline Project Style (仿照你的图片2) --- */
+/* --- Projects Accordion (仿照图片2风格) --- */
 .projects-wrapper { display: flex; flex-direction: column; gap: 16px; margin-top: 40px; }
 
 .project-accordion {
@@ -110,6 +110,7 @@ h2 { font-size: 2.2rem; margin-bottom: 10px; color: #0f172a; }
 .header-info h3 { margin: 0 0 8px 0; font-size: 1.15rem; }
 .header-tags { display: flex; gap: 8px; }
 .tag { font-size: 0.75rem; background: #f1f5f9; color: #475569; padding: 3px 10px; border-radius: 4px; font-weight: 500; }
+.tag.desc-tag { background: #fff7ed; color: #c2410c; border: 1px solid #ffedd5; } /* Orange tag for Chinese project note */
 
 .accordion-toggle {
   background: white; border: 1px solid var(--border); color: var(--text-muted); width: 32px; height: 32px; border-radius: 50%;
@@ -117,12 +118,12 @@ h2 { font-size: 2.2rem; margin-bottom: 10px; color: #0f172a; }
 }
 .project-accordion.active .accordion-toggle { transform: rotate(45deg); background: var(--primary); color: white; border-color: var(--primary); }
 
-/* Accordion Body: Timeline Style */
+/* Accordion Body: Timeline Style (Blue Circles) */
 .accordion-body { max-height: 0; overflow: hidden; transition: max-height 0.4s ease; background: #fff; }
 .project-accordion.active .accordion-body { border-top: 1px solid var(--border); }
 
 .timeline-container {
-  padding: 30px 30px 30px 40px; /* Left padding for line */
+  padding: 30px 30px 30px 45px; /* Left padding for line */
   position: relative;
 }
 
@@ -135,23 +136,26 @@ h2 { font-size: 2.2rem; margin-bottom: 10px; color: #0f172a; }
 .timeline-step { position: relative; margin-bottom: 25px; }
 .timeline-step:last-child { margin-bottom: 0; }
 
-/* The Circle Marker */
+/* The Blue Circle Marker */
 .step-marker {
-  position: absolute; left: -34px; top: 0;
-  width: 24px; height: 24px;
-  background: white; border: 2px solid var(--primary); border-radius: 50%;
-  color: var(--primary); font-size: 12px; font-weight: 700;
+  position: absolute; left: -41px; top: 0; /* Adjust position */
+  width: 28px; height: 28px;
+  background: #2563eb; /* Blue Fill */
+  border-radius: 50%;
+  color: white; font-size: 12px; font-weight: 700;
   display: flex; align-items: center; justify-content: center;
   z-index: 2;
+  box-shadow: 0 0 0 4px white; /* White halo to separate from line */
 }
 
-/* Highlight Step (Results) */
+/* Highlight Step (Results/Insight) */
 .timeline-step.highlight .step-marker {
-  background: var(--primary); color: white; border-color: var(--primary);
+  background: #16a34a; /* Green for success */
 }
 
 .step-content h4 {
-  font-size: 0.85rem; text-transform: uppercase; color: #94a3b8; margin-bottom: 5px; letter-spacing: 0.5px;
+  font-size: 0.9rem; font-weight: 700; color: #2563eb; margin-bottom: 6px; letter-spacing: 0.5px;
+  text-transform: uppercase;
 }
 .step-content p { font-size: 0.95rem; color: #334155; margin-bottom: 5px; }
 
@@ -163,10 +167,10 @@ h2 { font-size: 2.2rem; margin-bottom: 10px; color: #0f172a; }
 /* Responsive */
 @media (max-width: 768px) {
   .hero-grid, .education-grid { grid-template-columns: 1fr; }
-  .hero-img { aspect-ratio: 16/9; max-height: 300px; } /* Mobile picture wider */
+  .hero-img { aspect-ratio: 3/4; max-height: 400px; } 
   .timeline-container { padding-left: 30px; }
   .timeline-container::before { left: 20px; }
-  .step-marker { left: -34px; } /* Adjust for padding */
+  .step-marker { left: -34px; width:24px; height:24px; } 
 }
 
 /* Experience grid */
