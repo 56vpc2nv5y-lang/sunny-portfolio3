@@ -126,13 +126,20 @@ p{line-height:1.65}
               radial-gradient(900px 260px at 80% 40%, rgba(37,99,235,.10), transparent 60%),
               #f8fafc;
 }
-.hero-img img{
-  width:100%; 
-  height:100%; 
-  object-fit:cover; 
-  /* FIX: Moves the image focus down to show more face/body */
-  object-position: center 15%; 
-  display:block;
+/* 找到这部分并替换 */
+.hero-img img {
+  width: 100%; 
+  height: 100%; 
+  object-fit: cover; 
+  /* 修改这里：
+     0%   = 显示照片最顶端（头顶）
+     20%  = 稍微往下移一点（通常适合标准证件照）
+     50%  = 居中
+     100% = 显示照片最底端
+     你可以试着把 20% 改成 10% 或 30% 看看效果
+  */
+  object-position: center 20%; 
+  display: block;
 }
 .hero-img.noimg .hero-img-fallback{display:flex}
 .hero-img-fallback{
