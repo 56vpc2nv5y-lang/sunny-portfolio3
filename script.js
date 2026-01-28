@@ -7,6 +7,38 @@ const io = new IntersectionObserver((entries) => {
 }, { threshold: 0.12 });
 revealEls.forEach(el => io.observe(el));
 
+// 简单的数字滚动函数
+const runCounter = (el) => {
+  const target = parseFloat(el.getAttribute('data-target'));
+  const duration = 1500; // 动画持续 1.5秒
+  const step = target / (duration / 16); // 60fps
+  let current = 0;
+
+  const timer = setInterval(() => {
+    current += step;
+    if (current >= target) {
+      el.textContent = target.toFixed(2); // 保留两位小数
+      clearInterval(timer);
+    } else {
+      el.textContent = current.toFixed(2);
+    }
+  }, 16);
+};
+
+// 结合 IntersectionObserver (当元素进入屏幕时触发)
+const counterObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const counters = entry.target.querySelectorAll('.counter');
+      counters.forEach(c => runCounter(c));
+      counterObserver.unobserve(entry.target); // 只运行一次
+    }
+  });
+}, { threshold: 0.5 });
+
+document.querySelectorAll('.timeline-item').forEach(item => {
+  counterObserver.observe(item);
+});
 // ===== Year =====
 document.getElementById("year").textContent = new Date().getFullYear();
 
