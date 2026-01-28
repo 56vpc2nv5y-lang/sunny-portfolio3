@@ -54,7 +54,7 @@
           <div class="hero-card">
             <div class="hero-img" role="img" aria-label="Profile image placeholder">
               <img src="image.png" alt="Sunny Zhang"
-     onerror="this.style.display='none'; this.parentElement.classList.add('noimg');" />
+                   onerror="this.style.display='none'; this.parentElement.classList.add('noimg');" />
               <div class="hero-img-fallback">
                 <div class="fallback-title">Portfolio</div>
                 <div class="fallback-sub">Scroll to explore evidence</div>
@@ -121,26 +121,68 @@
       <div class="container">
         <div class="section-head reveal center">
           <h2>Education</h2>
-          <p class="muted">Strong quantitative foundation with applied analytics training.</p>
+          <p class="muted">Quantified highlights first, then concise modules.</p>
         </div>
 
         <div class="timeline">
+          <!-- NTU -->
           <div class="timeline-item card reveal" id="edu-ntu">
             <div class="timeline-top">
               <h3>Nanyang Technological University (NTU), Singapore</h3>
               <span class="tag">Aug 2025 – Jun 2026 (Expected)</span>
             </div>
-            <p><strong>MSc in Analytics</strong> • CGPA: 4.60 / 5.00</p>
-            <p class="muted">Key Modules: Data Mining (A+), Database Systems (A), Statistical Modelling & Data Analytics (A)</p>
+
+            <div class="edu-rows">
+              <div class="edu-left">
+                <p><strong>MSc in Analytics</strong></p>
+                <div class="edu-kpis">
+                  <span class="kpi">CGPA: 4.60 / 5.00</span>
+                  <span class="kpi">Key Grades: A+/A</span>
+                  <span class="kpi">Focus: BI + Modelling</span>
+                </div>
+              </div>
+              <div class="edu-right">
+                <ul class="edu-bullets">
+                  <li>Built end-to-end analytical workflows: data → modelling → visualization.</li>
+                  <li>Completed advanced coursework in data mining, databases, and statistical modelling.</li>
+                  <li>Applied SQL + Python for projects and evaluation.</li>
+                </ul>
+              </div>
+            </div>
+
+            <p class="muted edu-modules">
+              Key Modules: Data Mining (A+), Database Systems (A), Statistical Modelling & Data Analytics (A)
+            </p>
           </div>
 
+          <!-- GDUFS -->
           <div class="timeline-item card reveal" id="edu-gdufs">
             <div class="timeline-top">
               <h3>Guangdong University of Foreign Studies (GDUFS), China</h3>
               <span class="tag">Sep 2021 – Jun 2025</span>
             </div>
-            <p><strong>BSc in Statistics</strong> • CGPA: 3.90 / 4.00 (Top 4%)</p>
-            <p class="muted">Key Modules: Mathematical Statistics (A+), Econometrics (A+), Modern Regression Analysis (A)</p>
+
+            <div class="edu-rows">
+              <div class="edu-left">
+                <p><strong>BSc in Statistics</strong></p>
+                <div class="edu-kpis">
+                  <span class="kpi">CGPA: 3.90 / 4.00</span>
+                  <span class="kpi">Top 4%</span>
+                  <span class="kpi">Strength: Econometrics</span>
+                </div>
+              </div>
+              <div class="edu-right">
+                <ul class="edu-bullets">
+                  <li>Solid foundation in probability, inference, and regression modelling.</li>
+                  <li>Applied modelling in coursework, TA work, and independent projects.</li>
+                  <li>Comfortable with rigorous evaluation and interpretation (可解释性).</li>
+                </ul>
+              </div>
+            </div>
+
+            <p class="muted edu-modules">
+              Key Modules: Mathematical Statistics (A+), Econometrics (A+), Modern Regression Analysis (A)
+            </p>
           </div>
         </div>
       </div>
@@ -216,7 +258,7 @@
       <div class="container">
         <div class="section-head reveal center">
           <h2>Projects</h2>
-          <p class="muted">Selected work with clear problem framing and evidence.</p>
+          <p class="muted">Each project is a collapsible card: Context → What I did → How → Insight → Links.</p>
         </div>
 
         <div class="filters reveal">
@@ -228,78 +270,196 @@
         </div>
 
         <div class="grid3">
-          <article class="card reveal project" data-tags="nlp,viz" id="proj-gov-nlp">
-            <div class="project-media">
-              <img src="assets/project-1.png" alt="Project visual placeholder"
-                   onerror="this.style.display='none'; this.parentElement.classList.add('noimg');" />
-              <div class="media-fallback">
-                <div class="fallback-title">Project Image</div>
-                <div class="fallback-sub">Replace in /assets</div>
+          <!-- Project 1 -->
+          <article class="card reveal project project-collapsible" data-tags="nlp,viz" id="proj-gov-nlp">
+            <div class="project-head">
+              <div class="project-head-left">
+                <h3>Government Social Media Comment Analysis (NLP)</h3>
+                <p class="muted project-one-liner">
+                  20,000 comments • end-to-end pipeline • engagement insight delivery.
+                </p>
+                <div class="pillrow">
+                  <span class="tag">Python</span>
+                  <span class="tag">NLP</span>
+                  <span class="tag">Visualization</span>
+                </div>
               </div>
+
+              <button class="proj-toggle" type="button" aria-expanded="false" aria-controls="proj1-body">
+                <span class="plus">+</span>
+              </button>
             </div>
-            <h3>Government Social Media Comment Analysis (NLP)</h3>
-            <p class="muted">
-              Built an end-to-end text analytics workflow (collection → cleaning → categorization → reporting) on 20,000 public comments.
-              Delivered structured engagement metrics and content-type insights to evaluate communication effectiveness.
-            </p>
-            <div class="pillrow">
-              <a class="taglink" href="#skill-python">Python</a>
-              <a class="taglink" href="#skill-nlp">NLP</a>
-              <a class="taglink" href="#skill-viz">Visualization</a>
-            </div>
-            <div class="links">
-              <span class="availability">Links available upon request</span>
+
+            <div class="project-body" id="proj1-body" hidden>
+              <div class="proj-block">
+                <div class="proj-label">Context (业务背景)</div>
+                <div class="proj-text">
+                  Why it exists, what real-world problem it solves, and what success looks like.
+                </div>
+              </div>
+
+              <div class="proj-block">
+                <div class="proj-label">What I did (我做了什么)</div>
+                <ul class="proj-list">
+                  <li>Built the data collection + cleaning pipeline and defined analysis metrics.</li>
+                  <li>Designed the text categorization approach and validation checks.</li>
+                  <li>Produced the final reporting layout for stakeholders.</li>
+                </ul>
+              </div>
+
+              <div class="proj-block">
+                <div class="proj-label">How (方法与数据)</div>
+                <ul class="proj-list">
+                  <li>Data source: public comments from social platforms (replace with exact source).</li>
+                  <li>Why this method: balanced interpretability + performance for short texts.</li>
+                  <li>Process: preprocessing → feature/labeling → evaluation → dashboard-ready outputs.</li>
+                </ul>
+              </div>
+
+              <div class="proj-block">
+                <div class="proj-label">Insight (结论与启示)</div>
+                <ul class="proj-list">
+                  <li>Identified top discussion themes and engagement drivers.</li>
+                  <li>Suggested content strategy adjustments based on measurable signals.</li>
+                </ul>
+              </div>
+
+              <div class="proj-links">
+                <a class="btn" href="#" aria-disabled="true">GitHub</a>
+                <a class="btn" href="#" aria-disabled="true">Dashboard Screenshot</a>
+                <a class="btn" href="#" aria-disabled="true">Demo</a>
+              </div>
             </div>
           </article>
 
-          <article class="card reveal project" data-tags="model,viz" id="proj-health">
-            <div class="project-media">
-              <img src="assets/project-2.png" alt="Project visual placeholder"
-                   onerror="this.style.display='none'; this.parentElement.classList.add('noimg');" />
-              <div class="media-fallback">
-                <div class="fallback-title">Project Image</div>
-                <div class="fallback-sub">Replace in /assets</div>
+          <!-- Project 2 -->
+          <article class="card reveal project project-collapsible" data-tags="model,viz" id="proj-health">
+            <div class="project-head">
+              <div class="project-head-left">
+                <h3>Health Engagement via the Internet</h3>
+                <p class="muted project-one-liner">
+                  Defined indicators • validated quality • modelled drivers • translated into recommendations.
+                </p>
+                <div class="pillrow">
+                  <span class="tag">Modelling</span>
+                  <span class="tag">ML</span>
+                  <span class="tag">Visualization</span>
+                </div>
               </div>
+
+              <button class="proj-toggle" type="button" aria-expanded="false" aria-controls="proj2-body">
+                <span class="plus">+</span>
+              </button>
             </div>
-            <h3>Health Engagement via the Internet</h3>
-            <p class="muted">
-              Designed an engagement analysis framework, defined measurable indicators, and validated data quality.
-              Identified key drivers through modelling and translated results into actionable recommendations with clear visual summaries.
-            </p>
-            <div class="pillrow">
-              <a class="taglink" href="#skill-modelling">Modelling</a>
-              <a class="taglink" href="#skill-ml">Machine Learning</a>
-              <a class="taglink" href="#skill-viz">Visualization</a>
-            </div>
-            <div class="links">
-              <span class="availability">Links available upon request</span>
+
+            <div class="project-body" id="proj2-body" hidden>
+              <div class="proj-block">
+                <div class="proj-label">Context (业务背景)</div>
+                <div class="proj-text">
+                  Explain why engagement measurement matters and what decision it supports.
+                </div>
+              </div>
+
+              <div class="proj-block">
+                <div class="proj-label">What I did (我做了什么)</div>
+                <ul class="proj-list">
+                  <li>Designed the measurement framework and feature definitions.</li>
+                  <li>Ran modelling experiments and compared candidates.</li>
+                  <li>Summarized results into stakeholder-friendly recommendations.</li>
+                </ul>
+              </div>
+
+              <div class="proj-block">
+                <div class="proj-label">How (方法与数据)</div>
+                <ul class="proj-list">
+                  <li>Data source: (fill in dataset / survey / platform logs).</li>
+                  <li>Method choice: interpretable model for decision support (可解释性).</li>
+                  <li>Evaluation: holdout validation + error metrics + robustness checks.</li>
+                </ul>
+              </div>
+
+              <div class="proj-block">
+                <div class="proj-label">Insight (结论与启示)</div>
+                <ul class="proj-list">
+                  <li>Found key drivers that most strongly affect engagement outcomes.</li>
+                  <li>Converted drivers into actionable levers for policy/operations.</li>
+                </ul>
+              </div>
+
+              <div class="proj-links">
+                <a class="btn" href="#" aria-disabled="true">GitHub</a>
+                <a class="btn" href="#" aria-disabled="true">Dashboard Screenshot</a>
+                <a class="btn" href="#" aria-disabled="true">Demo</a>
+              </div>
             </div>
           </article>
 
-          <article class="card reveal project" data-tags="model,sql" id="proj-happiness">
-            <div class="project-media">
-              <img src="assets/project-3.png" alt="Project visual placeholder"
-                   onerror="this.style.display='none'; this.parentElement.classList.add('noimg');" />
-              <div class="media-fallback">
-                <div class="fallback-title">Project Image</div>
-                <div class="fallback-sub">Replace in /assets</div>
+          <!-- Project 3 -->
+          <article class="card reveal project project-collapsible" data-tags="model,sql" id="proj-happiness">
+            <div class="project-head">
+              <div class="project-head-left">
+                <h3>National Happiness Index Measurement</h3>
+                <p class="muted project-one-liner">
+                  Built multi-dimension index • multi-year comparison • factor attribution insight.
+                </p>
+                <div class="pillrow">
+                  <span class="tag">Modelling</span>
+                  <span class="tag">SQL</span>
+                  <span class="tag">Storytelling</span>
+                </div>
               </div>
+
+              <button class="proj-toggle" type="button" aria-expanded="false" aria-controls="proj3-body">
+                <span class="plus">+</span>
+              </button>
             </div>
-            <h3>National Happiness Index Measurement</h3>
-            <p class="muted">
-              Built a multi-dimension index system and analyzed multi-year public data to compare regional performance.
-              Produced interpretable rankings and factor-attribution insights to support decision making.
-            </p>
-            <div class="pillrow">
-              <a class="taglink" href="#skill-modelling">Modelling</a>
-              <a class="taglink" href="#skill-sql">SQL</a>
-              <a class="taglink" href="#skill-storytelling">Storytelling</a>
-            </div>
-            <div class="links">
-              <span class="availability">Links available upon request</span>
+
+            <div class="project-body" id="proj3-body" hidden>
+              <div class="proj-block">
+                <div class="proj-label">Context (业务背景)</div>
+                <div class="proj-text">
+                  Why the index matters and what it is used to compare/decide.
+                </div>
+              </div>
+
+              <div class="proj-block">
+                <div class="proj-label">What I did (我做了什么)</div>
+                <ul class="proj-list">
+                  <li>Defined the index structure and indicator weighting approach.</li>
+                  <li>Cleaned and joined multi-year public data using SQL.</li>
+                  <li>Built ranking + explanation narrative for stakeholders.</li>
+                </ul>
+              </div>
+
+              <div class="proj-block">
+                <div class="proj-label">How (方法与数据)</div>
+                <ul class="proj-list">
+                  <li>Data source: public statistical datasets (replace with exact source).</li>
+                  <li>Method choice: stable index design + interpretable decomposition.</li>
+                  <li>Validation: sensitivity checks on weights and missing data.</li>
+                </ul>
+              </div>
+
+              <div class="proj-block">
+                <div class="proj-label">Insight (结论与启示)</div>
+                <ul class="proj-list">
+                  <li>Produced regional ranking and identified key contributing factors.</li>
+                  <li>Suggested focus areas for improving index components.</li>
+                </ul>
+              </div>
+
+              <div class="proj-links">
+                <a class="btn" href="#" aria-disabled="true">GitHub</a>
+                <a class="btn" href="#" aria-disabled="true">Dashboard Screenshot</a>
+                <a class="btn" href="#" aria-disabled="true">Demo</a>
+              </div>
             </div>
           </article>
         </div>
+
+        <p class="muted" style="text-align:center; margin-top:18px;">
+          Tip: Replace “#” links with your real GitHub / dashboard / demo URLs.
+        </p>
       </div>
     </section>
 
