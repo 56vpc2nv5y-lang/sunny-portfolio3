@@ -118,10 +118,11 @@ p{line-height:1.65}
   box-shadow:var(--shadow);
   overflow:hidden;
 }
-.hero-img{
-  /* Revised height to be slightly shorter */
-  height:240px; 
-  position:relative;
+/* 修改 styles.css */
+.hero-img {
+  /* 改这里：把高度加大，让照片显示更多 */
+  height: 350px; 
+  position: relative;
   background: radial-gradient(900px 260px at 20% 10%, rgba(37,99,235,.16), transparent 55%),
               radial-gradient(900px 260px at 80% 40%, rgba(37,99,235,.10), transparent 60%),
               #f8fafc;
