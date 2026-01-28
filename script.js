@@ -13,6 +13,7 @@ document.getElementById("year").textContent = new Date().getFullYear();
 // ===== Project filters =====
 const chips = document.querySelectorAll(".chip");
 const projects = document.querySelectorAll(".project");
+
 chips.forEach(chip => {
   chip.addEventListener("click", () => {
     chips.forEach(c => c.classList.remove("active"));
@@ -27,7 +28,24 @@ chips.forEach(chip => {
   });
 });
 
-// ===== Skills evidence (new tabs style) =====
+// ===== Collapsible projects (accordion-like) =====
+const toggles = document.querySelectorAll(".proj-toggle");
+
+toggles.forEach(btn => {
+  btn.addEventListener("click", () => {
+    const expanded = btn.getAttribute("aria-expanded") === "true";
+    const bodyId = btn.getAttribute("aria-controls");
+    const body = document.getElementById(bodyId);
+    if (!body) return;
+
+    // Toggle current
+    btn.setAttribute("aria-expanded", String(!expanded));
+    btn.querySelector(".plus").textContent = expanded ? "+" : "−";
+    body.hidden = expanded;
+  });
+});
+
+// ===== Skills evidence (tabs style) =====
 const evidenceData = {
   sql: {
     title: "Usage Evidence for SQL:",
@@ -103,6 +121,6 @@ tabs.forEach(t => {
   });
 });
 
-// default select: Python (NLP) or SQL (你想默认哪个都行)
+// default select
 const defaultTab = document.querySelector('.skill-tab[data-skill="python_nlp"]') || document.querySelector('.skill-tab[data-skill="sql"]');
 if (defaultTab) defaultTab.click();
