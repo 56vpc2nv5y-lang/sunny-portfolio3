@@ -463,3 +463,27 @@ p{line-height:1.65}
   transform: translateY(-8px);
   box-shadow: 0 18px 40px rgba(15,23,42,.14);
 }
+
+/* ===== Education Layout Fix ===== */
+/* 让左侧宽度固定，右侧铺满，确保对齐整齐 */
+.edu-rows {
+  display: grid;
+  grid-template-columns: 240px 1fr; 
+  gap: 24px;
+  margin-top: 12px;
+  align-items: start;
+}
+
+/* 手机端适配：变成单列 */
+@media (max-width: 768px) {
+  .edu-rows {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}
+
+/* 数字高亮样式 */
+.highlight-num {
+  font-weight: 800;
+  color: #2563eb; /* 你的 accent 颜色 */
+}
