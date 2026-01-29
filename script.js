@@ -45,7 +45,6 @@ document.getElementById("year").textContent = new Date().getFullYear();
 // ===== Project filters =====
 const chips = document.querySelectorAll(".chip");
 // FIX: Only target projects inside the "Undergraduate/Experience" section for filtering
-// This prevents Grad Projects (which are separate) from disappearing when you click filters.
 const projects = document.querySelectorAll("#projects .project");
 
 chips.forEach(chip => {
@@ -103,6 +102,14 @@ const evidenceData = {
       { label: "RAG-based QA System", href: "#grad-projects", meta: "Vector embeddings and semantic search pipeline" }
     ]
   },
+  // NEW: R Language
+  r_stats: {
+    title: "Usage Evidence for R Language:",
+    items: [
+      { label: "Health Engagement Survey Analysis", href: "#proj-health", meta: "Used R for Ordinal Logistic Regression and structural equation modeling" },
+      { label: "Statistical Modelling Grad Project", href: "#gp-stat", meta: "Multivariate analysis and GLM implementation" }
+    ]
+  },
   modelling: {
     title: "Usage Evidence for Statistical Modelling:",
     items: [
@@ -111,11 +118,15 @@ const evidenceData = {
       { label: "Graduate Project: Advanced Statistical Modelling", href: "#grad-projects", meta: "GLM and multivariate analysis on complex datasets" }
     ]
   },
-  market_research: {
-    title: "Usage Evidence for Market Research:",
+  // NEW: Microsoft Suite (linked to everything)
+  ms_suite: {
+    title: "Usage Evidence for Microsoft Suite (Excel/PPT):",
     items: [
-      { label: "Haitong Securities — daily/weekly market reports", href: "#exp-securities", meta: "Market trend analysis based on price/volume and industry data" },
-      { label: "DataStory Internship — social listening insights", href: "#exp-datastory", meta: "Consumer sentiment & engagement analysis supporting strategy" }
+      { label: "Audit Intern @ Huaxing CPA", href: "#exp-audit", meta: "Advanced Excel for financial variance analysis and risk checking" },
+      { label: "Investment Intern @ Haitong Securities", href: "#exp-securities", meta: "Created market insight decks (PPT) and volume analysis reports" },
+      { label: "Data Analysis Studio Lead", href: "#proj-studio", meta: "Managed 30+ project deliverables and client presentations" },
+      { label: "DataStory Internship", href: "#exp-datastory", meta: "Excel for preliminary data validation before SQL ingestion" },
+      { label: "Competitions (Challenge Cup & Market Research)", href: "#projects", meta: "Structured reporting (Word) and final defense presentations (PPT)" }
     ]
   }
 };
