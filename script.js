@@ -44,7 +44,6 @@ document.getElementById("year").textContent = new Date().getFullYear();
 
 // ===== Project filters =====
 const chips = document.querySelectorAll(".chip");
-// FIX: Only target projects inside the "Undergraduate/Experience" section for filtering
 const projects = document.querySelectorAll("#projects .project");
 
 chips.forEach(chip => {
@@ -102,7 +101,7 @@ const evidenceData = {
       { label: "RAG-based QA System", href: "#grad-projects", meta: "Vector embeddings and semantic search pipeline" }
     ]
   },
-  // NEW: R Language
+  // 关键修正：添加 r_stats
   r_stats: {
     title: "Usage Evidence for R Language:",
     items: [
@@ -118,7 +117,7 @@ const evidenceData = {
       { label: "Graduate Project: Advanced Statistical Modelling", href: "#grad-projects", meta: "GLM and multivariate analysis on complex datasets" }
     ]
   },
-  // NEW: Microsoft Suite (linked to everything)
+  // 关键修正：添加 ms_suite
   ms_suite: {
     title: "Usage Evidence for Microsoft Suite (Excel/PPT):",
     items: [
@@ -137,7 +136,11 @@ const evidenceList = document.getElementById("evidence-list");
 
 function renderEvidence(key){
   const data = evidenceData[key];
-  if (!data) return;
+  // 增加安全性检查：如果key不存在，不报错
+  if (!data) {
+      console.warn("No data found for skill:", key);
+      return;
+  }
 
   evidenceTitle.textContent = data.title;
   evidenceList.innerHTML = "";
@@ -165,7 +168,10 @@ tabs.forEach(t => {
     });
     t.classList.add("active");
     t.setAttribute("aria-selected", "true");
-    renderEvidence(t.dataset.skill);
+    
+    // 获取点击按钮上的 data-skill 值
+    const skillKey = t.dataset.skill;
+    renderEvidence(skillKey);
   });
 });
 
