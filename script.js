@@ -34,7 +34,7 @@ const evidenceData = {
     title: "Usage Evidence for SQL:",
     items: [
       { label: "DataStory Internship — Monthly KPI reporting & validation", href: "#exp-datastory", meta: "SQL extraction, cleaning, and metric checks for management reports" },
-      { label: "DataStory Internship — Dashboard metric pipeline", href: "#exp-datastory", meta: "KPI monitoring supporting performance tracking" },
+      { label: "Duifenyi Learning Management System", href: "#gp-duifenyi", meta: "Database design and ER modeling for learning system" },
       { label: "Happiness Index Project", href: "#proj-happiness", meta: "Joined multi-year public datasets for index construction" }
     ]
   },
@@ -45,29 +45,27 @@ const evidenceData = {
     ]
   },
   python_nlp: {
-    title: "Usage Evidence for Python (NLP):",
+    title: "Usage Evidence for Python:",
     items: [
       { label: "Government Social Media Comment Analysis (NLP)", href: "#proj-gov-nlp", meta: "Pipeline on 20,000 comments: preprocessing → categorization → metrics" },
-      { label: "RAG-based QA System", href: "#gp-rag", meta: "Vector embeddings and semantic search pipeline" }
+      { label: "Bank Subscription prediction", href: "#gp-bank", meta: "XGBoost optimization and prediction modelling using Python" }
     ]
   },
   modelling: {
     title: "Usage Evidence for Statistical Modelling:",
     items: [
       { label: "Health Engagement via the Internet", href: "#proj-health", meta: "Driver analysis through modelling with interpretable recommendations" },
-      { label: "Teaching Assistant (Econometrics)", href: "#exp-ta", meta: "Econometrics + modelling concepts taught and applied in practice" },
-      { label: "Graduate Project: Advanced Statistical Modelling", href: "#gp-stat", meta: "GLM and multivariate analysis on complex datasets" }
+      { label: "Bank Subscription prediction", href: "#gp-bank", meta: "Machine learning classification using XGBoost" },
+      { label: "Gold price prediction", href: "#gp-gold", meta: "Time series forecasting using ARIMA and Grey Model" }
     ]
   },
-  // 修正：添加 R Language 的对应数据
   r_stat: {
     title: "Usage Evidence for R Language:",
     items: [
-      { label: "Statistical Modelling (MSc Course)", href: "#gp-stat", meta: "Derived causal relationships using GLM and rigorous hypothesis testing in R" },
+      { label: "Gold price prediction", href: "#gp-gold", meta: "Comparative study and forecasting using R" },
       { label: "Econometrics TA Support", href: "#exp-ta", meta: "Led workshops applying regression and diagnostic tests using R scripts" }
     ]
   },
-  // 修正：添加 Microsoft Suite 的对应数据
   office: {
     title: "Usage Evidence for Microsoft Suite:",
     items: [
@@ -121,7 +119,7 @@ tabs.forEach(t => {
 
 // ===== 5. 页面加载后的默认行为 =====
 document.addEventListener("DOMContentLoaded", () => {
-  // 默认选中 Python (你截图里的效果)
+  // 默认选中 Python
   const defaultTab = document.querySelector('.skill-tab[data-skill="python_nlp"]');
   if (defaultTab) {
     defaultTab.click();
