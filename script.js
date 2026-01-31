@@ -40,7 +40,7 @@ const evidenceData = {
   r_stat: {
     title: "Usage Evidence for R Language:",
     items: [
-      { label: "Gold price prediction", href: "#gp-gold", meta: "Comparative study and forecasting using R" },
+      { label: "Gold Price Prediction", href: "#gp-gold", meta: "Comparative study and forecasting using R" },
       { label: "Econometrics TA Support", href: "#exp-ta", meta: "Led workshops applying regression and diagnostic tests using R scripts" },
       { label: "Health Engagement Analysis", href: "#proj-health", meta: "Ordinal logistic regression and SEM implementation in R" }
     ]
@@ -49,7 +49,7 @@ const evidenceData = {
     title: "Usage Evidence for Python:",
     items: [
       { label: "Gov Social Media Comment Analysis (NLP)", href: "#proj-gov-nlp", meta: "Pipeline on 20,000 comments: preprocessing → categorization → metrics" },
-      { label: "Bank Subscription prediction", href: "#gp-bank", meta: "XGBoost optimization and prediction modelling using Python" },
+      { label: "Bank Subscription Prediction", href: "#gp-bank", meta: "XGBoost optimization and prediction modelling using Python" },
       { label: "Health Engagement Analysis", href: "#proj-health", meta: "Data processing and modeling support" },
       { label: "Teaching Assistant (Econometrics)", href: "#exp-ta", meta: "Python for supplementary analysis and student demos" },
       { label: "Investment Assistant Intern @ Haitong", href: "#exp-securities", meta: "Data automation and analysis for market reports" },
@@ -66,7 +66,7 @@ const evidenceData = {
   ml: {
     title: "Usage Evidence for Machine Learning:",
     items: [
-      { label: "Bank Subscription prediction", href: "#gp-bank", meta: "XGBoost classifier with feature engineering" },
+      { label: "Bank Subscription Prediction", href: "#gp-bank", meta: "XGBoost classifier with feature engineering" },
       { label: "Health Engagement Analysis", href: "#proj-health", meta: "Driver analysis using statistical learning methods" },
       { label: "Random Forest — Credit & Breast Cancer Data", href: "javascript:void(0)", meta: 'Files: <a href="ML3_random forest.pdf" target="_blank">Report (PDF)</a> | <a href="ML3_random forest.R" download>Code (R)</a>' },
       { label: "Online Public Opinion Defocusing (Hierarchical Clustering)", href: "ML5_Hierarchical Clustering–Based Classification and Prediction of Online Public Opinion Defocusing.pdf", meta: '(Chinese) <a href="ML5_Hierarchical Clustering–Based Classification and Prediction of Online Public Opinion Defocusing.pdf" target="_blank">report.pdf</a>' }
@@ -75,7 +75,7 @@ const evidenceData = {
   ts: {
     title: "Usage Evidence for Time Series Analysis:",
     items: [
-      { label: "Gold price prediction", href: "#gp-gold", meta: "ARIMA vs Grey Model (GM) forecasting" },
+      { label: "Gold Price Prediction", href: "#gp-gold", meta: "ARIMA vs Grey Model (GM) forecasting" },
       { label: "Short-Term Restaurant Customer Flow (ARIMA)", href: "javascript:void(0)", meta: 'Files: <a href="TIME2_restaurant.png" target="_blank">Graph (PNG)</a> | <a href="TIME2_Short-Term Restaurant Customer Flow Forecasting with ARIMA.pdf" target="_blank">Paper (PDF)</a>' },
       { label: "Global Temperature Change Forecasting (ARIMA)", href: "TIME3_An ARIMA-Based Study on Global Temperature Change Forecasting.pdf", meta: '(Chinese) <a href="TIME3_An ARIMA-Based Study on Global Temperature Change Forecasting.pdf" target="_blank">View Paper (PDF)</a>' }
     ]
