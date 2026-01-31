@@ -28,49 +28,77 @@ toggles.forEach(btn => {
 });
 
 // ===== 4. 技能证据库 (Skills Evidence) =====
-// 注意：这里的 key (如 r_stat) 必须和 HTML 里的 data-skill="r_stat" 完全一致
 const evidenceData = {
-  sql: {
-    title: "Usage Evidence for SQL:",
+  viz: {
+    title: "Usage Evidence for Visualization:",
     items: [
-      { label: "DataStory Internship — Monthly KPI reporting & validation", href: "#exp-datastory", meta: "SQL extraction, cleaning, and metric checks for management reports" },
-      { label: "Duifenyi Learning Management System", href: "#gp-duifenyi", meta: "Database design and ER modeling for learning system" },
-      { label: "Happiness Index Project", href: "#proj-happiness", meta: "Joined multi-year public datasets for index construction" }
-    ]
-  },
-  tableau: {
-    title: "Usage Evidence for Tableau:",
-    items: [
-      { label: "DataStory Internship — 10+ dashboards for leadership review", href: "#exp-datastory", meta: "BI dashboards for performance tracking and reporting" }
-    ]
-  },
-  python_nlp: {
-    title: "Usage Evidence for Python:",
-    items: [
-      { label: "Government Social Media Comment Analysis (NLP)", href: "#proj-gov-nlp", meta: "Pipeline on 20,000 comments: preprocessing → categorization → metrics" },
-      { label: "Bank Subscription prediction", href: "#gp-bank", meta: "XGBoost optimization and prediction modelling using Python" }
-    ]
-  },
-  modelling: {
-    title: "Usage Evidence for Statistical Modelling:",
-    items: [
-      { label: "Health Engagement via the Internet", href: "#proj-health", meta: "Driver analysis through modelling with interpretable recommendations" },
-      { label: "Bank Subscription prediction", href: "#gp-bank", meta: "Machine learning classification using XGBoost" },
-      { label: "Gold price prediction", href: "#gp-gold", meta: "Time series forecasting using ARIMA and Grey Model" }
+      { label: "DataStory Internship — Monthly KPI reporting & validation", href: "#exp-datastory", meta: "Tableau dashboards for performance tracking" },
+      { label: "Data Analysis Studio", href: "#proj-studio", meta: "Led studio generating revenue & creating sales dashboards" },
+      { label: "Airflight Analysis", href: "javascript:void(0)", meta: "(PDF in organization) Flight data visualization" }
     ]
   },
   r_stat: {
     title: "Usage Evidence for R Language:",
     items: [
       { label: "Gold price prediction", href: "#gp-gold", meta: "Comparative study and forecasting using R" },
-      { label: "Econometrics TA Support", href: "#exp-ta", meta: "Led workshops applying regression and diagnostic tests using R scripts" }
+      { label: "Econometrics TA Support", href: "#exp-ta", meta: "Led workshops applying regression and diagnostic tests using R scripts" },
+      { label: "Health Engagement Analysis", href: "#proj-health", meta: "Ordinal logistic regression and SEM implementation in R" }
     ]
   },
-  office: {
-    title: "Usage Evidence for Microsoft Suite:",
+  python: {
+    title: "Usage Evidence for Python:",
     items: [
-      { label: "Audit Intern @ Huaxing CPA", href: "#exp-audit", meta: "Advanced Excel (VLOOKUP, Pivot Tables) for financial variance analysis" },
-      { label: "Investment Assistant @ Haitong", href: "#exp-securities", meta: "Professional reporting and market presentations using PowerPoint and Excel" }
+      { label: "Gov Social Media Comment Analysis (NLP)", href: "#proj-gov-nlp", meta: "Pipeline on 20,000 comments: preprocessing → categorization → metrics" },
+      { label: "Bank Subscription prediction", href: "#gp-bank", meta: "XGBoost optimization and prediction modelling using Python" },
+      { label: "Health Engagement Analysis", href: "#proj-health", meta: "Data processing and modeling support" },
+      { label: "Teaching Assistant (Econometrics)", href: "#exp-ta", meta: "Python for supplementary analysis and student demos" },
+      { label: "Investment Assistant Intern @ Haitong", href: "#exp-securities", meta: "Data automation and analysis for market reports" },
+      { label: "Happiness Index Project", href: "#proj-happiness", meta: "XGBoost modeling and data consolidation" }
+    ]
+  },
+  sql: {
+    title: "Usage Evidence for SQL:",
+    items: [
+      { label: "DataStory Internship — Monthly KPI reporting & validation", href: "#exp-datastory", meta: "SQL extraction, cleaning, and metric checks for management reports" },
+      { label: "Duifenyi Learning Management System", href: "#gp-duifenyi", meta: "Database design and ER modeling for learning system" }
+    ]
+  },
+  ml: {
+    title: "Usage Evidence for Machine Learning:",
+    items: [
+      { label: "Bank Subscription prediction", href: "#gp-bank", meta: "XGBoost classifier with feature engineering" },
+      { label: "Health Engagement Analysis", href: "#proj-health", meta: "Driver analysis using statistical learning methods" },
+      { label: "Random Forest — Credit & Breast Cancer Data", href: "javascript:void(0)", meta: 'Files: <a href="ML3_random forest.pdf" target="_blank">Report (PDF)</a> | <a href="ML3_random forest.R" download>Code (R)</a>' },
+      { label: "Online Public Opinion Defocusing (Hierarchical Clustering)", href: "ML5_Hierarchical Clustering–Based Classification and Prediction of Online Public Opinion Defocusing.pdf", meta: '(Chinese) <a href="ML5_Hierarchical Clustering–Based Classification and Prediction of Online Public Opinion Defocusing.pdf" target="_blank">report.pdf</a>' }
+    ]
+  },
+  ts: {
+    title: "Usage Evidence for Time Series Analysis:",
+    items: [
+      { label: "Gold price prediction", href: "#gp-gold", meta: "ARIMA vs Grey Model (GM) forecasting" },
+      { label: "Short-Term Restaurant Customer Flow (ARIMA)", href: "javascript:void(0)", meta: 'Files: <a href="TIME2_restaurant.png" target="_blank">Graph (PNG)</a> | <a href="TIME2_Short-Term Restaurant Customer Flow Forecasting with ARIMA.pdf" target="_blank">Paper (PDF)</a>' },
+      { label: "Global Temperature Change Forecasting (ARIMA)", href: "TIME3_An ARIMA-Based Study on Global Temperature Change Forecasting.pdf", meta: '(Chinese) <a href="TIME3_An ARIMA-Based Study on Global Temperature Change Forecasting.pdf" target="_blank">View Paper (PDF)</a>' }
+    ]
+  },
+  causal: {
+    title: "Usage Evidence for Causal Inference:",
+    items: [
+      { label: "Electric Vehicles: Green or Trade-Off?", href: "#gp-ev", meta: "Life cycle assessment and conditional causal analysis" },
+      { label: "Happiness Index", href: "#proj-happiness", meta: "Policy impact analysis using observational data" }
+    ]
+  },
+  nlp: {
+    title: "Usage Evidence for Natural Language Processing (NLP):",
+    items: [
+      { label: "Gov Social Media NLP", href: "#proj-gov-nlp", meta: "Sentiment analysis on government social media interactions" },
+      { label: "Sentiment Analysis on IMDB Dataset", href: "NLP1_Sentiment Analysis on the IMDB Dataset.pdf", meta: '<a href="NLP1_Sentiment Analysis on the IMDB Dataset.pdf" target="_blank">View Analysis (PDF)</a>' },
+      { label: "Aspect-Based Sentiment Analysis (Restaurant Reviews)", href: "javascript:void(0)", meta: "<span class='tag'>In Progress</span> SVM and TF-IDF implementation" }
+    ]
+  },
+  genai: {
+    title: "Usage Evidence for Gen AI:",
+    items: [
+      { label: "RAG in medical and research", href: "AI1_RAG in medical and research.pdf", meta: '<a href="AI1_RAG in medical and research.pdf" target="_blank">View PDF</a>' }
     ]
   }
 };
@@ -93,7 +121,7 @@ function renderEvidence(key) {
     row.innerHTML = `
       <div class="evidence-bullet">→</div>
       <div>
-        <div><a href="${it.href}">${it.label}</a></div>
+        <div><a href="${it.href}" ${it.href.startsWith('#') || it.href.startsWith('javascript') ? '' : 'target="_blank"'}>${it.label}</a></div>
         <div class="evidence-meta">${it.meta}</div>
       </div>
     `;
@@ -119,8 +147,8 @@ tabs.forEach(t => {
 
 // ===== 5. 页面加载后的默认行为 =====
 document.addEventListener("DOMContentLoaded", () => {
-  // 默认选中 Python
-  const defaultTab = document.querySelector('.skill-tab[data-skill="python_nlp"]');
+  // 默认选中 Visualization
+  const defaultTab = document.querySelector('.skill-tab[data-skill="viz"]');
   if (defaultTab) {
     defaultTab.click();
   }
