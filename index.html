@@ -16,8 +16,9 @@
       <nav class="nav">
         <a href="#about">About</a>
         <a href="#education">Education</a>
-        <a href="#grad-projects">Grad Projects</a>
-        <a href="#projects">Competitions</a> <a href="#experience">Experience</a>
+        <a href="#project-timeline">Projects</a> 
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
         <a class="nav-cta" href="#contact">Contact</a>
       </nav>
     </div>
@@ -36,7 +37,7 @@
           </p>
 
           <div class="hero-actions">
-            <a class="btn primary" href="#grad-projects">View Latest Work</a>
+            <a class="btn primary" href="#project-timeline">View Projects</a>
             <a class="btn" href="resume.pdf" download>Download CV</a>
           </div>
 
@@ -65,6 +66,10 @@
               <div class="meta-item">
                 <div class="meta-k">Focus</div>
                 <div class="meta-v">BI • Analytics • Insight</div>
+              </div>
+              <div class="meta-item">
+                <div class="meta-k">Domain</div>
+                <div class="meta-v">Finance • Audit • Marketing</div>
               </div>
             </div>
           </div>
@@ -110,20 +115,20 @@
 
     <section id="education" class="section alt">
       <div class="container">
-        <div class="section-head reveal center active">
+        <div class="section-head reveal center">
           <h2>Education</h2>
           <p class="muted">High-impact academic performance.</p>
         </div>
 
         <div class="education-grid">
           
-          <div class="edu-card reveal active">
+          <div class="edu-card reveal">
             <div class="edu-header">
               <div class="edu-icon"><i class="fas fa-graduation-cap"></i></div>
               <div>
                 <h3>MSc in Analytics</h3>
                 <span class="edu-school">Nanyang Technological University (NTU)</span>
-                <span class="edu-time">Aug 2025 – Jun 2026</span>
+                <span class="edu-time">Aug 2025 – Jun 2026 (Expected)</span>
               </div>
             </div>
             
@@ -144,7 +149,7 @@
             </div>
           </div>
 
-          <div class="edu-card reveal active">
+          <div class="edu-card reveal">
             <div class="edu-header">
               <div class="edu-icon"><i class="fas fa-university"></i></div>
               <div>
@@ -175,136 +180,230 @@
       </div>
     </section>
 
-    <section id="grad-projects" class="section">
+    <section id="project-timeline" class="section">
       <div class="container">
         <div class="section-head reveal center">
-          <h2>Graduate Projects</h2>
-          <p class="muted">Advanced coursework & research at NTU.</p>
+          <h2>Project Timeline</h2>
+          <p class="muted">Competitions (Left) vs. Coursework (Right)</p>
         </div>
 
-        <div class="grid2">
+        <div class="split-layout">
           
-          <article class="card reveal project project-collapsible" id="gp-rag">
-            <div class="project-head">
-              <div class="project-icon">
-                 <img src="https://placehold.co/200/eff6ff/1d4ed8?text=RAG" alt="RAG System" />
+          <div class="timeline-column reveal">
+            <h3 class="col-title">Competitions & Leadership</h3>
+            
+            <div class="time-card project-collapsible" id="proj-studio">
+              <div class="time-marker"></div>
+              <div class="project-head small-head">
+                <div class="project-head-left">
+                  <span class="time-tag">Jun 2023 – Jun 2024</span>
+                  <h4>Data Analysis Studio</h4>
+                  <div class="pillrow compact">
+                    <span class="tag">Leadership</span>
+                    <span class="tag">Revenue: 63k</span>
+                  </div>
+                </div>
+                <button class="proj-toggle" type="button" aria-expanded="false" aria-controls="proj-studio-body"><span class="plus">+</span></button>
               </div>
-              <div class="project-head-left">
-                <h3>RAG-based QA System</h3>
-                <p class="muted project-one-liner">Enhancing LLM accuracy with external knowledge.</p>
-                <div class="pillrow">
-                  <span class="tag">LLM</span>
-                  <span class="tag">Python</span>
-                  <span class="tag">Vector DB</span>
+              <div class="project-body" id="proj-studio-body" hidden>
+                <div class="proj-summary">
+                  <p><strong>Role:</strong> Led a studio managing 30+ projects and 200+ participants. Generated <strong>CNY 63,000 revenue</strong>.</p>
+                </div>
+                <div class="proj-insight-box">
+                  <div class="proj-label">Key Impact</div>
+                  <ul class="proj-list">
+                    <li>Team won <strong>Bronze Medal</strong> in "Challenge Cup".</li>
+                    <li>Mentored teams to 50% National Award win rate.</li>
+                  </ul>
                 </div>
               </div>
-              <button class="proj-toggle" type="button" aria-expanded="false" aria-controls="gp-rag-body"><span class="plus">+</span></button>
             </div>
-            <div class="project-body" id="gp-rag-body" hidden>
-              <div class="proj-summary">
-                <p><strong>Method:</strong> Built a retrieval pipeline using <strong>LangChain & ChromaDB</strong>. Used Semantic Search (Cosine Similarity) to fetch specialized context before generation to reduce hallucinations.</p>
-              </div>
-              <div class="proj-insight-box">
-                <div class="proj-label">Key Insight & Impact</div>
-                <ul class="proj-list">
-                  <li>Reduced factual errors by a <strong>significant margin</strong>.</li>
-                  <li>Achieved viable latency (sub-200ms) for real-time usage.</li>
-                </ul>
-              </div>
-              <div class="proj-links"><a class="btn" href="#">GitHub</a></div>
-            </div>
-          </article>
 
-          <article class="card reveal project project-collapsible" id="gp-recsys">
-            <div class="project-head">
-              <div class="project-icon">
-                 <img src="https://placehold.co/200/eff6ff/1d4ed8?text=RecSys" alt="RecSys" />
+            <div class="time-card project-collapsible" id="proj-health">
+              <div class="time-marker"></div>
+              <div class="project-head small-head">
+                <div class="project-head-left">
+                  <span class="time-tag">Nov 2022 – Apr 2023</span>
+                  <h4>Health Engagement Analysis</h4>
+                  <div class="pillrow compact">
+                    <span class="tag">National 3rd Prize</span>
+                    <span class="tag">Modelling</span>
+                  </div>
+                </div>
+                <button class="proj-toggle" type="button" aria-expanded="false" aria-controls="proj-health-body"><span class="plus">+</span></button>
               </div>
-              <div class="project-head-left">
-                <h3>Personalized Recommender</h3>
-                <p class="muted project-one-liner">Hybrid filtering approach for retention.</p>
-                <div class="pillrow">
-                  <span class="tag">ML</span>
-                  <span class="tag">Python</span>
+              <div class="project-body" id="proj-health-body" hidden>
+                <div class="proj-summary">
+                  <p>Analyzed 910 survey responses using <strong>Ordinal Logistic Regression</strong> and <strong>Random Forest</strong>.</p>
+                </div>
+                <div class="proj-insight-box">
+                  <div class="proj-label">Key Impact</div>
+                  <ul class="proj-list">
+                    <li>Won <strong>National Third Prize</strong> (Top 10%).</li>
+                    <li>Identified Trust & Content Perception as top drivers.</li>
+                  </ul>
                 </div>
               </div>
-              <button class="proj-toggle" type="button" aria-expanded="false" aria-controls="gp-recsys-body"><span class="plus">+</span></button>
             </div>
-            <div class="project-body" id="gp-recsys-body" hidden>
-              <div class="proj-summary">
-                <p><strong>Method:</strong> Implemented a Hybrid Model (Collaborative + Content-based) to solve the "Cold Start" problem. Used <strong>Matrix Factorization (SVD)</strong> and deep learning embeddings.</p>
-              </div>
-              <div class="proj-insight-box">
-                <div class="proj-label">Key Insight & Impact</div>
-                <ul class="proj-list">
-                  <li>Hybrid model <strong>outperformed baseline by 15%</strong> (RMSE).</li>
-                  <li>Successfully handled sparse user-item matrices.</li>
-                </ul>
-              </div>
-              <div class="proj-links"><a class="btn" href="#">GitHub</a></div>
-            </div>
-          </article>
 
-          <article class="card reveal project project-collapsible" id="gp-stat">
-            <div class="project-head">
-              <div class="project-icon">
-                 <img src="https://placehold.co/200/eff6ff/1d4ed8?text=Stat" alt="Statistics" />
+            <div class="time-card project-collapsible" id="proj-gov-nlp">
+              <div class="time-marker"></div>
+              <div class="project-head small-head">
+                <div class="project-head-left">
+                  <span class="time-tag">Jun 2022 – Jun 2023</span>
+                  <h4>Gov Social Media NLP</h4>
+                  <div class="pillrow compact">
+                    <span class="tag">Provincial Funding</span>
+                    <span class="tag">NLP</span>
+                  </div>
+                </div>
+                <button class="proj-toggle" type="button" aria-expanded="false" aria-controls="proj-gov-body"><span class="plus">+</span></button>
               </div>
-              <div class="project-head-left">
-                <h3>Statistical Modelling</h3>
-                <p class="muted project-one-liner">Multivariate analysis for interpretation.</p>
-                <div class="pillrow">
-                  <span class="tag">R / Python</span>
-                  <span class="tag">Statistics</span>
+              <div class="project-body" id="proj-gov-body" hidden>
+                <div class="proj-summary">
+                  <p>Processed 20,000+ comments using Dictionary-based NLP and LDA Topic Modelling.</p>
+                </div>
+                <div class="proj-insight-box">
+                  <div class="proj-label">Key Impact</div>
+                  <ul class="proj-list">
+                    <li>Awarded <strong>2nd Prize</strong> (University Level).</li>
+                    <li>Secured Provincial-level "Climbing Plan" funding.</li>
+                  </ul>
                 </div>
               </div>
-              <button class="proj-toggle" type="button" aria-expanded="false" aria-controls="gp-stat-body"><span class="plus">+</span></button>
             </div>
-            <div class="project-body" id="gp-stat-body" hidden>
-              <div class="proj-summary">
-                <p><strong>Method:</strong> Derived causal relationships from noisy data using <strong>GLM</strong>. Conducted rigorous hypothesis testing and validated assumptions (normality, homoscedasticity).</p>
-              </div>
-              <div class="proj-insight-box">
-                <div class="proj-label">Key Insight & Impact</div>
-                <ul class="proj-list">
-                  <li>Identified significant predictors with <strong>95% confidence</strong>.</li>
-                  <li>Provided interpretable coefficients for stakeholders.</li>
-                </ul>
-              </div>
-              <div class="proj-links"><a class="btn" href="#">Report</a></div>
-            </div>
-          </article>
 
-          <article class="card reveal project project-collapsible" id="gp-mining">
-            <div class="project-head">
-              <div class="project-icon">
-                 <img src="https://placehold.co/200/eff6ff/1d4ed8?text=Mining" alt="Mining" />
+             <div class="time-card project-collapsible" id="proj-happiness">
+              <div class="time-marker"></div>
+              <div class="project-head small-head">
+                <div class="project-head-left">
+                  <span class="time-tag">2023</span>
+                  <h4>Happiness Index</h4>
+                  <div class="pillrow compact">
+                    <span class="tag">Statistics</span>
+                    <span class="tag">SQL</span>
+                  </div>
+                </div>
+                <button class="proj-toggle" type="button" aria-expanded="false" aria-controls="proj-happiness-body"><span class="plus">+</span></button>
               </div>
-              <div class="project-head-left">
-                <h3>High-Dim Data Mining</h3>
-                <p class="muted project-one-liner">Pattern discovery in large-scale datasets.</p>
-                <div class="pillrow">
-                  <span class="tag">Clustering</span>
-                  <span class="tag">Python</span>
+              <div class="project-body" id="proj-happiness-body" hidden>
+                <div class="proj-summary">
+                  <p>Constructed a regional happiness index using multi-year public datasets and PCA for weight assignment.</p>
+                </div>
+                <div class="proj-insight-box">
+                  <div class="proj-label">Key Impact</div>
+                  <ul class="proj-list">
+                    <li>Identified key areas for policy improvement.</li>
+                  </ul>
                 </div>
               </div>
-              <button class="proj-toggle" type="button" aria-expanded="false" aria-controls="gp-mining-body"><span class="plus">+</span></button>
             </div>
-            <div class="project-body" id="gp-mining-body" hidden>
-              <div class="proj-summary">
-                <p><strong>Method:</strong> Segmented users and detected anomalies by preprocessing high-dim data (PCA/t-SNE). Applied <strong>K-Means & DBSCAN</strong> algorithms.</p>
-              </div>
-              <div class="proj-insight-box">
-                <div class="proj-label">Key Insight & Impact</div>
-                <ul class="proj-list">
-                  <li>Discovered distinct user personas for targeted marketing.</li>
-                  <li>Detected outliers representing potential irregularities.</li>
-                </ul>
-              </div>
-              <div class="proj-links"><a class="btn" href="#">GitHub</a></div>
-            </div>
-          </article>
 
+          </div>
+
+          <div class="timeline-column reveal">
+            <h3 class="col-title">Course Projects (MSc & BSc)</h3>
+
+            <div class="time-card project-collapsible" id="gp-rag">
+              <div class="time-marker"></div>
+              <div class="project-head small-head">
+                <div class="project-head-left">
+                  <span class="time-tag">2026 (Expected)</span>
+                  <h4>RAG-based QA System</h4>
+                  <div class="pillrow compact">
+                    <span class="tag">LLM</span>
+                    <span class="tag">Vector DB</span>
+                  </div>
+                </div>
+                <button class="proj-toggle" type="button" aria-expanded="false" aria-controls="gp-rag-body"><span class="plus">+</span></button>
+              </div>
+              <div class="project-body" id="gp-rag-body" hidden>
+                <div class="proj-summary">
+                  <p>Built a retrieval pipeline using <strong>LangChain & ChromaDB</strong> to reduce LLM hallucinations.</p>
+                </div>
+                <div class="proj-insight-box">
+                  <div class="proj-label">Result</div>
+                  <ul class="proj-list">
+                    <li>Reduced factual errors significantly.</li>
+                    <li>Achieved sub-200ms latency.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="time-card project-collapsible" id="gp-recsys">
+              <div class="time-marker"></div>
+              <div class="project-head small-head">
+                <div class="project-head-left">
+                  <span class="time-tag">2026 (Expected)</span>
+                  <h4>Hybrid Recommender</h4>
+                  <div class="pillrow compact">
+                    <span class="tag">Deep Learning</span>
+                    <span class="tag">SVD</span>
+                  </div>
+                </div>
+                <button class="proj-toggle" type="button" aria-expanded="false" aria-controls="gp-recsys-body"><span class="plus">+</span></button>
+              </div>
+              <div class="project-body" id="gp-recsys-body" hidden>
+                <div class="proj-summary">
+                  <p>Solved "Cold Start" problem using Hybrid Filtering (Collaborative + Content-based).</p>
+                </div>
+                <div class="proj-insight-box">
+                  <div class="proj-label">Result</div>
+                  <ul class="proj-list">
+                    <li>Outperformed baseline by <strong>15% (RMSE)</strong>.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="time-card project-collapsible" id="gp-stat">
+              <div class="time-marker"></div>
+              <div class="project-head small-head">
+                <div class="project-head-left">
+                  <span class="time-tag">2025</span>
+                  <h4>Statistical Modelling</h4>
+                  <div class="pillrow compact">
+                    <span class="tag">R Language</span>
+                    <span class="tag">GLM</span>
+                  </div>
+                </div>
+                <button class="proj-toggle" type="button" aria-expanded="false" aria-controls="gp-stat-body"><span class="plus">+</span></button>
+              </div>
+              <div class="project-body" id="gp-stat-body" hidden>
+                <div class="proj-summary">
+                  <p>Derived causal relationships using GLM and rigorous hypothesis testing (normality, homoscedasticity).</p>
+                </div>
+                <div class="proj-insight-box">
+                  <div class="proj-label">Result</div>
+                  <ul class="proj-list">
+                    <li>Identified predictors with <strong>95% confidence</strong>.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="time-card project-collapsible" id="gp-mining">
+              <div class="time-marker"></div>
+              <div class="project-head small-head">
+                <div class="project-head-left">
+                  <span class="time-tag">2025</span>
+                  <h4>High-Dim Data Mining</h4>
+                  <div class="pillrow compact">
+                    <span class="tag">Clustering</span>
+                    <span class="tag">Python</span>
+                  </div>
+                </div>
+                <button class="proj-toggle" type="button" aria-expanded="false" aria-controls="gp-mining-body"><span class="plus">+</span></button>
+              </div>
+              <div class="project-body" id="gp-mining-body" hidden>
+                <div class="proj-summary">
+                  <p>User segmentation using PCA, t-SNE, K-Means and DBSCAN on large-scale datasets.</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
         </div>
       </div>
     </section>
@@ -361,146 +460,7 @@
       </div>
     </section>
 
-    <section id="projects" class="section">
-      <div class="container">
-        <div class="section-head reveal center">
-          <h2>Competitions</h2>
-          <p class="muted">Selected works from competitions & internships.</p>
-        </div>
-
-        <div class="grid2">
-          
-          <article class="card reveal project project-collapsible" id="proj-studio">
-            <div class="project-head">
-              <div class="project-icon">
-                 <img src="https://placehold.co/200/f0f9ff/0369a1?text=Studio" alt="Data Studio" />
-              </div>
-              <div class="project-head-left">
-                <h3>Data Analysis Studio</h3>
-                <p class="muted project-one-liner">Leadership • 30+ Projects • Mentorship</p>
-                <div class="pillrow">
-                  <span class="tag">Leadership</span>
-                  <span class="tag">Mentoring</span>
-                  <span class="tag">Viz</span>
-                </div>
-              </div>
-              <button class="proj-toggle" type="button" aria-expanded="false" aria-controls="proj-studio-body"><span class="plus">+</span></button>
-            </div>
-            <div class="project-body" id="proj-studio-body" hidden>
-              <div class="proj-summary">
-                <p><strong>Role:</strong> Led a studio managing <strong>30+ on-campus data projects</strong> and 200+ participants. Enhanced team skills in statistical modeling, survey design, and data visualization.</p>
-              </div>
-              <div class="proj-insight-box">
-                <div class="proj-label">Key Insight & Impact (Resume Highlight)</div>
-                <ul class="proj-list">
-                  <li>Generated <strong>CNY 63,000 revenue</strong> through project delivery.</li>
-                  <li>Mentored teams to achieve a <strong>50% National Award win rate</strong>.</li>
-                  <li>Awarded <strong>Bronze Medal</strong> in "Challenge Cup" competition.</li>
-                </ul>
-              </div>
-            </div>
-          </article>
-
-          <article class="card reveal project project-collapsible" id="proj-gov-nlp">
-            <div class="project-head">
-              <div class="project-icon">
-                 <img src="https://placehold.co/200/f0f9ff/0369a1?text=NLP" alt="NLP" />
-              </div>
-              <div class="project-head-left">
-                <h3>Gov Social Media NLP</h3>
-                <p class="muted project-one-liner">20,000 comments • Sentiment pipeline.</p>
-                <div class="pillrow">
-                  <span class="tag">Python</span>
-                  <span class="tag">NLP</span>
-                </div>
-              </div>
-              <button class="proj-toggle" type="button" aria-expanded="false" aria-controls="proj-gov-body"><span class="plus">+</span></button>
-            </div>
-            <div class="project-body" id="proj-gov-body" hidden>
-              <div class="proj-summary">
-                <p><strong>Method:</strong> Led a team to analyze <strong>20,000+ Weibo comments</strong>. Built reproducible data scraping/cleaning pipelines and applied Dictionary-based NLP + LDA Topic Modelling.</p>
-              </div>
-              <div class="proj-insight-box">
-                <div class="proj-label">Key Insight & Impact</div>
-                <ul class="proj-list">
-                  <li>Awarded <strong>2nd Prize (University Level)</strong> in "Challenge Cup".</li>
-                  <li>Secured <strong>Provincial-level funding</strong> (Climbing Plan).</li>
-                  <li>Categorized feedback into 7 distinct content types for strategy.</li>
-                </ul>
-              </div>
-              <div class="proj-links"><a class="btn" href="#">GitHub (CN)</a></div>
-            </div>
-          </article>
-
-          <article class="card reveal project project-collapsible" id="proj-health">
-            <div class="project-head">
-              <div class="project-icon">
-                 <img src="https://placehold.co/200/f0f9ff/0369a1?text=Health" alt="Health" />
-              </div>
-              <div class="project-head-left">
-                <h3>Health Engagement</h3>
-                <p class="muted project-one-liner">Driver analysis & interpretable modelling.</p>
-                <div class="pillrow">
-                  <span class="tag">Modelling</span>
-                  <span class="tag">ML</span>
-                </div>
-              </div>
-              <button class="proj-toggle" type="button" aria-expanded="false" aria-controls="proj-health-body"><span class="plus">+</span></button>
-            </div>
-            <div class="project-body" id="proj-health-body" hidden>
-              <div class="proj-summary">
-                <p><strong>Method:</strong> Processed survey data from <strong>910 residents</strong> (92.6% validity). Applied Ordinal Logistic Regression, Random Forest, and SEM (Structural Equation Modeling).</p>
-              </div>
-              <div class="proj-insight-box">
-                <div class="proj-label">Key Insight & Impact</div>
-                <ul class="proj-list">
-                  <li>Achieved <strong>National Third Prize</strong> at Market Research Competition (Top 10%).</li>
-                  <li>identified Trust and Content Perception as top engagement drivers.</li>
-                </ul>
-              </div>
-              <div class="proj-links"><a class="btn" href="#">GitHub (CN)</a></div>
-            </div>
-          </article>
-
-          <article class="card reveal project project-collapsible" id="proj-happiness">
-            <div class="project-head">
-              <div class="project-icon">
-                 <img src="https://placehold.co/200/f0f9ff/0369a1?text=Index" alt="Happiness" />
-              </div>
-              <div class="project-head-left">
-                <h3>Happiness Index</h3>
-                <p class="muted project-one-liner">Index construction • Multi-year comparison.</p>
-                <div class="pillrow">
-                  <span class="tag">Statistics</span>
-                  <span class="tag">SQL</span>
-                </div>
-              </div>
-              <button class="proj-toggle" type="button" aria-expanded="false" aria-controls="proj-happiness-body"><span class="plus">+</span></button>
-            </div>
-            <div class="project-body" id="proj-happiness-body" hidden>
-              <div class="proj-summary">
-                <p><strong>Method:</strong> Constructed a regional happiness index using multi-year public datasets. Used <strong>SQL</strong> for cleaning and <strong>PCA</strong> for weight assignment.</p>
-              </div>
-              <div class="proj-insight-box">
-                <div class="proj-label">Key Insight & Impact</div>
-                <ul class="proj-list">
-                  <li>Produced regional rankings and factor attribution analysis.</li>
-                  <li>Identified key areas for policy improvement in specific provinces.</li>
-                </ul>
-              </div>
-              <div class="proj-links"><a class="btn" href="#">Paper (CN)</a></div>
-            </div>
-          </article>
-
-        </div>
-        
-        <p class="muted" style="text-align:center; margin-top:18px;">
-          Note: "CN Docs" indicates projects with documentation primarily in Chinese.
-        </p>
-      </div>
-    </section>
-
-    <section id="skills" class="section alt">
+    <section id="skills" class="section">
       <div class="container">
         <div class="section-head reveal center">
           <h2>Skills & Evidence</h2>
@@ -511,9 +471,9 @@
           <button class="skill-tab active" data-skill="sql" id="skill-sql">SQL</button>
           <button class="skill-tab" data-skill="tableau" id="skill-tableau">Tableau</button>
           <button class="skill-tab" data-skill="python_nlp" id="skill-python">Python</button>
-          <button class="skill-tab" data-skill="r_stats">R Language</button>
           <button class="skill-tab" data-skill="modelling" id="skill-modelling">Modelling</button>
-          <button class="skill-tab" data-skill="ms_suite">Microsoft Suite</button>
+          <button class="skill-tab" data-skill="r_stat" id="skill-r">R Language</button>
+          <button class="skill-tab" data-skill="office" id="skill-office">Microsoft Suite</button>
         </div>
 
         <div class="evidence-card reveal">
@@ -523,7 +483,7 @@
       </div>
     </section>
 
-    <section id="contact" class="section">
+    <section id="contact" class="section alt">
       <div class="container">
         <div class="section-head reveal center">
           <h2>Contact</h2>
