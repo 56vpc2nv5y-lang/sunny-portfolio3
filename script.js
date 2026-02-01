@@ -154,33 +154,32 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-// ... (保留你之前的 Scroll Reveal, Year Update 等代码) ...
-
-// ===== 6. Privacy-Friendly Analytics (新增) =====
+// ===== 6. Privacy-Friendly Analytics (已更新支持 ?ref= 参数) =====
 (async function initAnalytics() {
   const counterEl = document.getElementById("visit-count");
   const statContainer = document.getElementById("visit-stat");
   
-  // 替换为你部署后的实际 API 地址
-  // 如果部署在 Vercel，路径通常是 /api/visit
-  // 本地开发时可能是 http://localhost:3000/api/visit
+  // 部署在 Vercel 后的 API 地址
   const API_ENDPOINT = "/api/visit"; 
 
   try {
-    // 获取当前路径，用于统计特定页面（如果是单页应用，默认传 /）
     const currentPath = window.location.pathname;
 
-    const response = await fetch(`${API_ENDPOINT}?path=${encodeURIComponent(currentPath)}`, {
+    // === 新逻辑：获取 URL 里的 ref 参数 ===
+    // 例如访问 ...?ref=bytedance，这里就会抓取到 "bytedance"
+    const urlParams = new URLSearchParams(window.location.search);
+    const refTag = urlParams.get('ref') || ''; 
+
+    // 发送请求时带上 path 和 ref
+    const response = await fetch(`${API_ENDPOINT}?path=${encodeURIComponent(currentPath)}&ref=${encodeURIComponent(refTag)}`, {
       method: "GET",
-      // 保持请求轻量，不需要复杂的 headers
     });
 
     if (response.ok) {
       const data = await response.json();
       if (data.total_visits) {
-        // 数字滚动动画效果
         animateValue(counterEl, 0, data.total_visits, 1500);
-        statContainer.style.opacity = "1"; // 淡入显示
+        statContainer.style.opacity = "1";
       }
     }
   } catch (err) {
@@ -198,7 +197,7 @@ function animateValue(obj, start, end, duration) {
     if (progress < 1) {
       window.requestAnimationFrame(step);
     } else {
-      obj.innerHTML = end; // 确保最终数值准确
+      obj.innerHTML = end; 
     }
   };
   window.requestAnimationFrame(step);
