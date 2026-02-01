@@ -153,3 +153,53 @@ document.addEventListener("DOMContentLoaded", () => {
     defaultTab.click();
   }
 });
+
+// ... (保留你之前的 Scroll Reveal, Year Update 等代码) ...
+
+// ===== 6. Privacy-Friendly Analytics (新增) =====
+(async function initAnalytics() {
+  const counterEl = document.getElementById("visit-count");
+  const statContainer = document.getElementById("visit-stat");
+  
+  // 替换为你部署后的实际 API 地址
+  // 如果部署在 Vercel，路径通常是 /api/visit
+  // 本地开发时可能是 http://localhost:3000/api/visit
+  const API_ENDPOINT = "/api/visit"; 
+
+  try {
+    // 获取当前路径，用于统计特定页面（如果是单页应用，默认传 /）
+    const currentPath = window.location.pathname;
+
+    const response = await fetch(`${API_ENDPOINT}?path=${encodeURIComponent(currentPath)}`, {
+      method: "GET",
+      // 保持请求轻量，不需要复杂的 headers
+    });
+
+    if (response.ok) {
+      const data = await response.json();
+      if (data.total_visits) {
+        // 数字滚动动画效果
+        animateValue(counterEl, 0, data.total_visits, 1500);
+        statContainer.style.opacity = "1"; // 淡入显示
+      }
+    }
+  } catch (err) {
+    console.log("Analytics skipped (local or network error).");
+  }
+})();
+
+// 辅助函数：数字滚动动画
+function animateValue(obj, start, end, duration) {
+  let startTimestamp = null;
+  const step = (timestamp) => {
+    if (!startTimestamp) startTimestamp = timestamp;
+    const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+    obj.innerHTML = Math.floor(progress * (end - start) + start);
+    if (progress < 1) {
+      window.requestAnimationFrame(step);
+    } else {
+      obj.innerHTML = end; // 确保最终数值准确
+    }
+  };
+  window.requestAnimationFrame(step);
+}
