@@ -92,7 +92,7 @@ const evidenceData = {
     items: [
       { label: "Gov Social Media NLP", href: "#proj-gov-nlp", meta: "Sentiment analysis on government social media interactions" },
       { label: "Sentiment Analysis on IMDB Dataset", href: "NLP1_Sentiment Analysis on the IMDB Dataset.pdf", meta: '<a href="NLP1_Sentiment Analysis on the IMDB Dataset.pdf" target="_blank">View Analysis (PDF)</a>' },
-      { label: "Aspect-Based Sentiment Analysis (Restaurant Reviews)", href: "javascript:void(0)", meta: "<span class='tag'>In Progress</span> SVM and TF-IDF implementation" }
+      { label: "Aspect-Based Sentiment Analysis (Restaurant Reviews)", href: "javascript:void(0)", meta: "Benchmarked TF-IDF + SVM against Bi-LSTM + Attention models." }
     ]
   },
   genai: {
@@ -121,7 +121,7 @@ function renderEvidence(key) {
     row.innerHTML = `
       <div class="evidence-bullet">→</div>
       <div>
-        <div><a href="${it.href}" ${it.href.startsWith('#') || it.href.startsWith('javascript') ? '' : 'target="_blank"'}>${it.label}</a></div>
+       <div><a href="${it.href}" ${it.href.startsWith('#') || it.href.startsWith('javascript') ? '' : 'target="_blank"'}>${it.label}</a></div>
         <div class="evidence-meta">${it.meta}</div>
       </div>
     `;
