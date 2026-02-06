@@ -118,14 +118,39 @@ function renderEvidence(key) {
   data.items.forEach(it => {
     const row = document.createElement("div");
     row.className = "evidence-item";
+    
+    // 生成 HTML
     row.innerHTML = `
       <div class="evidence-bullet">→</div>
       <div>
-       <div><a href="${it.href}" ${it.href.startsWith('#') || it.href.startsWith('javascript') ? '' : 'target="_blank"'}>${it.label}</a></div>
+       <div><a class="evidence-link" href="${it.href}" ${it.href.startsWith('#') || it.href.startsWith('javascript') ? '' : 'target="_blank"'}>${it.label}</a></div>
         <div class="evidence-meta">${it.meta}</div>
       </div>
     `;
     evidenceList.appendChild(row);
+  });
+
+  // === NEW: 重新绑定点击事件，处理自动展开 ===
+  document.querySelectorAll(".evidence-link").forEach(link => {
+    link.addEventListener("click", function(e) {
+        const href = this.getAttribute("href");
+        if(href.startsWith("#")) {
+            // 找到目标元素
+            const targetId = href.substring(1);
+            const targetEl = document.getElementById(targetId);
+            
+            if(targetEl) {
+                // 如果目标是一个折叠卡片 (.project-collapsible)，且目前是关闭的，则自动点击它的 toggle 按钮
+                if(targetEl.classList.contains("project-collapsible")) {
+                    const toggleBtn = targetEl.querySelector(".proj-toggle");
+                    const isExpanded = toggleBtn.getAttribute("aria-expanded") === "true";
+                    if(!isExpanded) {
+                        toggleBtn.click();
+                    }
+                }
+            }
+        }
+    });
   });
 }
 
@@ -166,7 +191,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const currentPath = window.location.pathname;
 
     // === 新逻辑：获取 URL 里的 ref 参数 ===
-    // 例如访问 ...?ref=bytedance，这里就会抓取到 "bytedance"
     const urlParams = new URLSearchParams(window.location.search);
     const refTag = urlParams.get('ref') || ''; 
 
