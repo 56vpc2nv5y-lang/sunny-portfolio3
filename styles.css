@@ -12,7 +12,18 @@
 }
 
 * { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
+
+/* FIX FOR ANCHOR SCROLLING: This ensures clicks don't land behind the fixed header */
+html { 
+  scroll-behavior: smooth; 
+  scroll-padding-top: 90px; /* Global fallback padding */
+}
+
+/* Apply specific offset to elements likely to be linked to */
+section, .section, .card, .time-card, .edu-card {
+  scroll-margin-top: 100px; /* Height of header (approx 70px) + breathing room */
+}
+
 body {
   margin: 0;
   font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Helvetica Neue", sans-serif;
@@ -84,7 +95,7 @@ p { line-height: 1.65; }
 .hero-img {
   height: 480px; position: relative;
   background: radial-gradient(900px 260px at 20% 10%, rgba(37,99,235,.16), transparent 55%),
-              radial-gradient(900px 260px at 80% 40%, rgba(37,99,235,.10), transparent 60%), #f8fafc;
+             radial-gradient(900px 260px at 80% 40%, rgba(37,99,235,.10), transparent 60%), #f8fafc;
 }
 .hero-img img { width: 100%; height: 100%; object-fit: cover; object-position: center top; display: block; }
 .hero-img.noimg .hero-img-fallback { display: flex; }
@@ -141,8 +152,7 @@ p { line-height: 1.65; }
    ========================================= */
 
 .education-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: grid; grid-template-columns: 1fr 1fr;
   gap: 24px;
 }
 @media (max-width: 768px) {
@@ -261,7 +271,7 @@ p { line-height: 1.65; }
 /* 头部布局 */
 .small-head {
   display: block; 
-  padding-right: 40px; 
+  padding-right: 40px;
 }
 
 .project-head-left { flex: none; }
@@ -335,8 +345,8 @@ p { line-height: 1.65; }
   position:relative; overflow:hidden;
 }
 .evidence-card::before{
-  content:""; position:absolute; left:0; top:0; bottom:0;
-  width:6px; background:var(--accent);
+ content:""; position:absolute; left:0; top:0; bottom:0;
+ width:6px; background:var(--accent);
 }
 .evidence-title{ font-size:20px; font-weight:800; color:#1d4ed8; margin:0 0 12px 0; }
 .evidence-list{ display:grid; gap:10px; }
